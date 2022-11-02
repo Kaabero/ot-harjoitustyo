@@ -1,0 +1,182 @@
+commit eec5b51492dfee8be1847fb816b9b8c17b55dc95
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 14:04:10 2022 +0200
+
+    poistettu tiedosto file1 ja muutettu file2 nimeksi file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 529fa81383aedc84145395fdbf8a87d519ddd92a
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 14:00:21 2022 +0200
+
+    hakemisto ja tiedostot lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 99e0a8a044b820e8de4da3726e4cb4bfbcddbce1
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:52:37 2022 +0200
+
+    tiedostoissa tehtyä poistoja ja lisäyksiä
+
+ ot_viikko1/eka.txt    | 5 +++++
+ ot_viikko1/kolmas.txt | 2 +-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+commit 18593cbf33238fa0e4d0585b1d61776929f4c9f6
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:49:11 2022 +0200
+
+    tiedoston nimi muutettu
+
+ ot_viikko1/{tiedosto.txt => eka.txt} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e729e59ef4d06a341f17b37c2a99732b98ed1115
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:46:08 2022 +0200
+
+    toinen.txt poistettu
+
+ ot_viikko1/toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 61d1c8a78a5cb57775cb7d208740d8c6116a498b
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:40:29 2022 +0200
+
+    tekstiä poistettu ja lisätty
+
+ ot_viikko1/tiedosto.txt | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+commit 09bb5bfac50fd6c17c1faa12739e32be994dbbaf
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:36:42 2022 +0200
+
+    tekstiä lisätty
+
+ ot_viikko1/tiedosto.txt | 83 
+++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 82 insertions(+), 1 deletion(-)
+
+commit b94a96f1d5aa65279800d303d1a047c5e22a76ad
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:29:53 2022 +0200
+
+    tiedostoja muutettu
+
+ ot_viikko1/kolmas.txt | 1 +
+ ot_viikko1/toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 72651dfb27fc4a794d5674cb6578aec01640fa2d
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:28:04 2022 +0200
+
+    kolmas lisätty
+
+ ot_viikko1/kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 41e45dca669e7185f7a92917ce1eef6195758a32
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:24:06 2022 +0200
+
+    väärä sijainti, tiedostot poistettu
+
+ kolmas.txt | 1 -
+ toinen.txt | 1 -
+ 2 files changed, 2 deletions(-)
+
+commit b9ff3d0a1fea7e7b8775072f185c3cef2210e242
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 13:06:47 2022 +0200
+
+    hakemisto ja tiedosto lisätty
+
+ "stuff/teht\303\244v\303\244t.txt" | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f88bed04d65b15d7c05745ccbbaac7142e6f7c18
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 12:58:04 2022 +0200
+
+    tehtiin muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit b59d8931772f57b1c07c22e497fe308846aec2e9
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Wed Nov 2 12:52:52 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 08e3197999ca585cd767ef42be984648e27c7cfc
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Tue Nov 1 21:58:44 2022 +0200
+
+    poisto
+
+ testi | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 7cd82abffbaa27a379e3d17d2c67d1513c756c19
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Tue Nov 1 21:56:23 2022 +0200
+
+    testi
+
+ testi | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 09ba3f976a3d5a46d452d6fb36ef30739d069677
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Tue Nov 1 21:52:08 2022 +0200
+
+    poisto
+
+ teksti.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 71d90f2678db3df0a53748a445dce142d02f9f8a
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Tue Nov 1 21:50:58 2022 +0200
+
+    muutos ja lisäys
+
+ ot_viikko1/tiedosto.txt | 1 +
+ ot_viikko1/toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 1e81d581d8786b807ebcca7a1f0d42c0f625ae67
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Tue Nov 1 21:49:20 2022 +0200
+
+    tiedosto.txt luotu
+
+ ot_viikko1/tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2909dc201336647b89c6d4df3a1abf80a658a734
+Author: Katri <katri.kuoppala@helsinki.fi>
+Date:   Tue Nov 1 20:09:52 2022 +0200
+
+    testi
+
+ README.md  | 0
+ teksti.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+katrikuoppala@Katri-Air tiedostoja % 
+
