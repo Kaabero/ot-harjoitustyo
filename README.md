@@ -1,7 +1,7 @@
 # Ohjelmistotekniikka harjoitustyö
 
-Tämä kansio sisältää **Ohjelmistotekniikka**-kurssin materiaalia. Eri *viikkojen* materiaali 
-löytyy omien hakemistojensa alta.
+Tämä kansio sisältää **Ohjelmistotekniikka**-kurssin materiaalia. Eri viikkojen laskarien materiaali 
+löytyy omien hakemistojensa alta *laskarit*-kansiosta.
 
 ## Tehtävät
 
