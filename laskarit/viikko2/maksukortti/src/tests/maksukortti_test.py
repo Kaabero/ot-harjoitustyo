@@ -9,21 +9,19 @@ class TestMaksukortti(unittest.TestCase):
         self.assertEqual("Hello world", "Hello world")
 
     def test_konstruktori_asettaa_saldon_oikein(self):
-        
-        vastaus = str(kortti)
 
-        self.assertEqual(vastaus, "Kortilla on rahaa 10.00 euroa")
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 10.00 euroa")
 
     def test_syo_edullisesti_vahentaa_saldoa_oikein(self):
-        kortti.syo_edullisesti()
+        self.kortti.syo_edullisesti()
 
-        self.assertEqual(str(kortti), "Kortilla on rahaa 7.50 euroa")
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 7.50 euroa")
 
 
     def test_syo_maukkaasti_vahentaa_saldoa_oikein(self):
-    	kortti.syo_maukkaasti()
+    	self.kortti.syo_maukkaasti()
 
-    	self.assertEqual(str(kortti), "Kortilla on rahaa 6.00 euroa")
+    	self.assertEqual(str(self.kortti), "Kortilla on rahaa 6.00 euroa")
 
     def test_syo_edullisesti_ei_vie_saldoa_negatiiviseksi(self):
     	kortti = Maksukortti(200)
@@ -32,15 +30,15 @@ class TestMaksukortti(unittest.TestCase):
     	self.assertEqual(str(kortti), "Kortilla on rahaa 2.00 euroa")
 
     def test_syo_maukkaasti_ei_vie_saldoa_negatiiviseksi(self):
-	kortti = Maksukortti(300)
-	kortti.syo_maukkaasti()
+	    kortti = Maksukortti(300)
+	    kortti.syo_maukkaasti()
 
-	self.assertEqual(str(kortti), "Kortilla on rahaa 3.00 euroa")
+	    self.assertEqual(str(kortti), "Kortilla on rahaa 3.00 euroa")
 
 
     def test_kortille_voi_ladata_rahaa(self):
-	self.kortti.lataa_rahaa(2500)
-
+        self.kortti.lataa_rahaa(2500)
+        
         self.assertEqual(str(self.kortti), "Kortilla on rahaa 35.00 euroa")
 
     def test_kortin_saldo_ei_ylita_maksimiarvoa(self):
@@ -49,18 +47,18 @@ class TestMaksukortti(unittest.TestCase):
         self.assertEqual(str(self.kortti), "Kortilla on rahaa 150.00 euroa")
 
     def test_negatiivista_summaa_ei_voi_ladata(self):
-	self.kortti.lataa_rahaa(-1500)
+	    self.kortti.lataa_rahaa(-1500)
 
-	self.assertEqual(str(self.kortti), "Kortilla on rahaa 10.00 euroa")
+	    self.assertEqual(str(self.kortti), "Kortilla on rahaa 10.00 euroa")
 
     def test_kortilla_rahaa_edullisen_lounaan_verran(self):
-	kortti=Maksukortti(250)
-	kortti.syo_edullisesti()
+	    kortti=Maksukortti(250)
+	    kortti.syo_edullisesti()
 
-	self.assertEqual(str(kortti), "Kortilla on rahaa 0.00 euroa")
+	    self.assertEqual(str(kortti), "Kortilla on rahaa 0.00 euroa")
 
     def test_kortilla_rahaa_maukkaan_lounaan_verran(self):
-	kortti=Maksukortti(400)
-	kortti.syo_maukkaasti()
+	    kortti=Maksukortti(400)
+	    kortti.syo_maukkaasti()
 
-	self.assertEqual(str(kortti), "Kortilla on rahaa 0.00 euroa") 
+	    self.assertEqual(str(kortti), "Kortilla on rahaa 0.00 euroa") 
