@@ -6,6 +6,7 @@ löytyy omien hakemistojensa alta *laskarit*-kansiosta.
 ## Harjoitustyön dokumentaatio
 
 [Vaatimusmäärittely](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+
 [Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
 ## Tehtävät
