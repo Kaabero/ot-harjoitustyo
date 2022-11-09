@@ -29,7 +29,7 @@ ilmoittaa tästä
 	- Käyttäjä kirjaa liikuntalajin, keston, päivämäärän, rankkuusasteen annetulla 
 asteikolla ja fiilksen annetulla asteikolla
 - Käyttäjä voi lisätä itselleen liikuntalajeja kirjauksia varten  
-- Liikuntapäiväkirja ja tavoitteet näkyvät vain käyttäjälle
+- Liikuntapäiväkirja näkyy vain käyttäjälle
 - Käyttäjä voi kirjautua ulos järjestelmästä
 
 ## Jatkokehitysideoita
