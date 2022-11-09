@@ -9,7 +9,7 @@ kaikilla oma yksilöllinen päiväkirjansa ja omat tavoitteet.
 
 ## Käyttäjät
 
-Sovelluksella on ainoastaan yksi käyttäjärooli eli **normaali** käyttäjä. 
+Sovelluksella on ainoastaan yksi käyttäjärooli eli *normaali* käyttäjä. 
 
 ## Perusversion tarjoama toiminnallisuus
 
@@ -26,7 +26,7 @@ ilmoittaa tästä
 ### Kirjautumisen jälkeen
 - Käyttäjä näkee kuluvan viikon liikuntasuorituksensa
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen
-	-Käyttäjä kirjaa liikuntalajin, keston, päivämäärän, rankkuusasteen annetulla 
+	- Käyttäjä kirjaa liikuntalajin, keston, päivämäärän, rankkuusasteen annetulla 
 asteikolla ja fiilksen annetulla asteikolla
 - Käyttäjä voi lisätä itselleen liikuntalajeja kirjauksia varten  
 - Liikuntapäiväkirja ja tavoitteet näkyvät vain käyttäjälle
