@@ -7,7 +7,7 @@ löytyy omien hakemistojensa alta *laskarit*-kansiosta.
 
 [Vaatimusmäärittely](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+[Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 ## Tehtävät
 
