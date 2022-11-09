@@ -13,7 +13,7 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli **normaali** käyttäjä.
 
 ## Perusversion tarjoama toiminnallisuus
 
-# Ennen kirjautumista
+### Ennen kirjautumista
 
 - Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
 	- Käyttäjätunnuksen on oltava uniikki
@@ -23,7 +23,7 @@ ja salasana niille varattuihin kenttiin
 	- Jos käyttäjätunnus tai salasana ovat väärin, järjestelmä 
 ilmoittaa tästä
 
-# Kirjautumisen jälkeen
+### Kirjautumisen jälkeen
 - Käyttäjä näkee kuluvan viikon liikuntasuorituksensa
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen
 	-Käyttäjä kirjaa liikuntalajin, keston, päivämäärän, rankkuusasteen annetulla 
