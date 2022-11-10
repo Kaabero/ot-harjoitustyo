@@ -19,7 +19,7 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli *normaali* käyttäjä.
 	- Käyttäjätunnuksen on oltava uniikki
 - Käyttäjä voi kirjautua järjestelmään 
 	- Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus 
-ja salasana niille varattuihin kenttiin
+ja salasana 
 	- Jos käyttäjätunnus tai salasana ovat väärin, järjestelmä 
 ilmoittaa tästä
 
