@@ -24,13 +24,12 @@ ja salasana
 ilmoittaa tästä
 
 ### Kirjautumisen jälkeen
+
 - Käyttäjä näkee kuluvan viikon liikuntasuorituksensa
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen
 	- Käyttäjä kirjaa liikuntalajin, keston, päivämäärän, rankkuusasteen annetulla 
-asteikolla ja fiilksen annetulla asteikolla
-- Käyttäjä voi lisätä itselleen liikuntalajeja kirjauksia varten  
-- Liikuntapäiväkirja näkyy vain käyttäjälle
-- Käyttäjä voi kirjautua ulos järjestelmästä
+asteikolla ja fiilksen annetulla asteikolla 
+- Käyttäjä voi kirjautua ulos istunnosta
 
 ## Jatkokehitysideoita
 
