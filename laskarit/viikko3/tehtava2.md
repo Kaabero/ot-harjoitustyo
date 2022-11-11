@@ -37,8 +37,8 @@
       }
 
       class Nopat {
-        int noppa1
-        int noppa2
+        list noppa1
+        list noppa2
         heita()
       }
       class Rakennukset {
