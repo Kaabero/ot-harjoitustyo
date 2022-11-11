@@ -4,7 +4,7 @@
       Pelaaja "2..8" --> "1" Pelilauta
       Pelaaja ..> Nopat
       Pelaaja --> Toiminnot
-      Pelaaja ..> Pankki
+      Pelaaja --> Pankki
       Rakennukset ..> Pelilauta
       Pelaaja ..> Rakennukset
       Pelaaja ..> Kortit
@@ -20,7 +20,7 @@
         +siirry_pelilaudalla()
         +hae_ruutu_pelilaudalla()
         +suorita toiminto()
-        +asioi_pankissa()
+        +maksa_pankkiin()
         +rakenna()
         +ota_kortti()
         
@@ -59,7 +59,6 @@
         +int saldo
         +vastaanota_rahaa()
         +anna_rahaa()
-        +siirra_rahaa()
       }
         
      
