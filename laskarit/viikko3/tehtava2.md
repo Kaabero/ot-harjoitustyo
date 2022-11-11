@@ -20,7 +20,7 @@
         +siirry_pelilaudalla()
         +hae_ruutu_pelilaudalla()
         +suorita toiminto()
-        +maksa_pankkiin()
+        +maksa()
         +rakenna()
         +ota_kortti()
         
