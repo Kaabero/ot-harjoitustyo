@@ -3,7 +3,7 @@ from user import User
 from activity import Activity
 
 class ExerciseApplication():
-    """Sovelluslogiikasta vastaa luokka."""
+    """Sovelluslogiikasta vastaava luokka."""
     
     def __init__(self):
         self.users=[]
