@@ -17,3 +17,6 @@ class User:
         self.username = username
         self.password = password
         self.activities = []
+
+        def __str__(self):
+            return self.username

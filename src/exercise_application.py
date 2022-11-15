@@ -24,7 +24,9 @@ class ExerciseApplication():
             if command == "0":
                 break
             elif command == "1":
-                self.create_user()
+                username = input("Username: ")
+                password = input("Password: ")
+                self.create_user(username, password)
             elif command == "2":
                 if self.login():
                     print("Login -toiminnot")
@@ -35,12 +37,9 @@ class ExerciseApplication():
             else:
                 self.login_instructions()
 
-    def create_user(self):
+    def create_user(self, username, password):
 
         #Luo uuden käyttäjän kirjaa käyttäjän sisään.
-
-        username = input("Username: ")
-        password = input("Password: ")
 
         for user in self.users:
             if user.username == username:
@@ -79,4 +78,4 @@ class ExerciseApplication():
         pass
     
 
-ExerciseApplication().execute()
+#ExerciseApplication().execute()
