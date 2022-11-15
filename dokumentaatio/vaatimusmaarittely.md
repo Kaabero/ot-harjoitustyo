@@ -27,8 +27,7 @@ ilmoittaa tästä
 
 - Käyttäjä näkee kuluvan viikon liikuntasuorituksensa
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen
-	- Käyttäjä kirjaa liikuntalajin, keston, päivämäärän, rankkuusasteen annetulla 
-asteikolla ja fiilksen annetulla asteikolla 
+	- Käyttäjä kirjaa liikuntalajin, keston ja päivämäärän
 - Käyttäjä voi kirjautua ulos istunnosta
 
 ## Jatkokehitysideoita
@@ -40,8 +39,8 @@ toiminnallisuuksilla:
 perusteella
 - Kirjautumisen jälkeen käyttäjä näkee viikottaisen liikuntasuorituksensa lisäksi tavoitteensa 
 täyttymisen tilanteen kuluvalla viikolla
-- Käyttäjä voi hakea tilastoja päivämäärien, lajien, rankkuusasteen ja fiilisasteen 
-perusteella (eri lajien suorituskertojen määrä ja 
+- Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
 kesto tiettynä ajanjaksona)
+- Käyttäjä kirjaa liikuntasuoritukseen myös suorituksen rankkuusasteen annetulla asteikolla ja fiilksen annetulla asteikolla ja voi hakea tilastoja näiden perusteella
 - Käyttäjä voi poistaa liikuntasuorituksen
   
