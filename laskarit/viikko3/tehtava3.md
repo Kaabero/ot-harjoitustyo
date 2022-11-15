@@ -1,23 +1,24 @@
-sequenceDiagram
-    participant main
-    participant kone
-    Alice->>John: Machine()
+
 ```mermaid
 sequenceDiagram
-  actor User
-  participant UI
-  participant TodoService
-  participant TodoRepository
-  participant todo
-  User->>UI: click "Create"
-  UI->>TodoService: create_todo("vie roskat")
-  TodoService->>todo: Todo("vie roskat", kalle)
-  TodoService->>TodoRepository: create(todo)
-  TodoRepository-->>TodoService: todo
-  TodoService-->>UI: todo 
-  UI->>UI: initialize_todo_list()
+  participant main
+  participant kone
+  main->>kone: Machine()
+  participant tankki
+  kone->>tankki: FuelTank()
+  kone->>tankki: fill(40)
+  tankki-->>main: fuel_contents
+  participant moottori
+  tankki->>moottori: Engine(tankki)
+  main->>kone: drive()
+  kone->>moottori: start()
+  moottori->>tankki: consume(5)
+  tankki-->>main: fuel_contents
+  kone->>moottori: is_running()
+  moottori-->>kone: tank_content(35) > 0
+  kone->>moottori: use_energy()
+  moottori->>tankki: consume(10)
+  tankki-->>main: fuel_contents
+
 ```
-    Note right of John: Rational thoughts <br/>prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+ 
