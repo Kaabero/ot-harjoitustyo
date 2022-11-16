@@ -9,15 +9,9 @@ löytyy omien hakemistojensa alta *laskarit*-kansiosta.
 
 [Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
-## Tehtävät
+[Changelog](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
-### Viikko 1
 
-Linkit:
-
-[gitlog.txt](https://github.com/Kaabero/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/Kaabero/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
 
 
 
