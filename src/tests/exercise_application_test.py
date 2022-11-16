@@ -6,7 +6,7 @@ class TestExerciseApplication(unittest.TestCase):
     def setUp(self):
         self.application=ExerciseApplication()
         user1=User("Eddy", "salasana1")
-        self.application.users.append(user1)
+        self.application._users.add_new_user(user1)
         
 
     def test_create_user_if_user_already_exists(self):

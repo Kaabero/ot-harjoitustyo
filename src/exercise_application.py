@@ -1,12 +1,13 @@
 
 from user import User
 from activity import Activity
+from users import Users
 
 class ExerciseApplication():
-    """Sovelluslogiikasta vastaava luokka."""
+    #Sovelluslogiikasta vastaava luokka
     
     def __init__(self):
-        self.users=[]
+        self._users=Users()
         self.user=None
     
 
@@ -24,9 +25,13 @@ class ExerciseApplication():
             if command == "0":
                 break
             elif command == "1":
-                username = input("Username: ")
-                password = input("Password: ")
-                self.create_user(username, password)
+                while True:
+                    username = input("Username: ")
+                    password = input("Password: ")
+                    
+                    self.create_user(username, password)
+                    break
+
             elif command == "2":
                 if self.login():
                     print("Login -toiminnot")
@@ -39,14 +44,17 @@ class ExerciseApplication():
 
     def create_user(self, username, password):
 
-        #Luo uuden käyttäjän kirjaa käyttäjän sisään.
+        #Luo uuden käyttäjän ja kirjaa käyttäjän sisään.
 
-        for user in self.users:
+        for user in self._users.get_all_users():
             if user.username == username:
                 raise ValueError (f"Username {username} already exists")
 
+        if len(password)<8:
+                raise ValueError ("Minimum password length is eight characters. Please try again.")
+
         user=User(username, password)
-        self.users.append(user)
+        self._users.add_new_user(user)
 
         self_user=user
         return user
@@ -60,7 +68,7 @@ class ExerciseApplication():
         password = input("Password: ")
 
 
-        for user in self.users:
+        for user in self._users.get_all_users():
             if user.username == username:
                 if user.password == password:
                     self_user=user
