@@ -1,7 +1,10 @@
 # Ohjelmistotekniikka harjoitustyö
 
-Tämä kansio sisältää **Ohjelmistotekniikka**-kurssin materiaalia. Eri viikkojen laskarien materiaali 
-löytyy omien hakemistojensa alta *laskarit*-kansiosta.
+## ExerciseDiary
+
+ExerciseDiary on Helsingin yliopiston Tietojenkäsittelytieteen kurssin **Ohjelmistotekniikka** harjoitustyö. 
+
+Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, asettaa liikuntatavoitteita ja seurata näiden tavoitteiden toteutumista. Sovellusta voi käyttää useampi rekisteröitynyt käyttäjä, joilla on kaikilla oma yksilöllinen päiväkirjansa ja omat tavoitteet.
 
 ## Harjoitustyön dokumentaatio
 
@@ -10,6 +13,10 @@ löytyy omien hakemistojensa alta *laskarit*-kansiosta.
 [Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 [Changelog](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
+
+## Python -versio
+
+Suositellaan käytettäväksi vähintään Python-versiota 3.8.
 
 
 
