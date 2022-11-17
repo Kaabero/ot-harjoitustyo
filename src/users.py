@@ -1,3 +1,4 @@
+
 from user import User
 
 class Users():
@@ -10,6 +11,7 @@ class Users():
 
     def add_new_user(self, user):
         self._users.append(user)
+        
 
     
 

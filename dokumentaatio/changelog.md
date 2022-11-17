@@ -10,3 +10,4 @@
 - Lisätty Activity -luokka, joka vastaa yksittäisistä liikuntasuorituksista
 - Testattu, että käyttäjätunnuksen luominen palauttaa käyttäjän User -oliona
 - Testattu, että jo olemassaolevan käyttäjätunnuksen luonti aiheuttaa virheen
+- Testattu, että liian lyhyt salasana aiheuttaa virheen

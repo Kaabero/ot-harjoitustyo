@@ -1,14 +1,24 @@
 
 from user import User
 from activity import Activity
-from users import Users
+from file_service import FileService
 
 class ExerciseApplication():
-    #Sovelluslogiikasta vastaava luokka
+    """Sovelluslogiikasta vastaava luokka."""
     
     def __init__(self):
-        self._users=Users()
-        self.user=None
+        self._users=[]
+        self._file=FileService("users.txt")
+        self._user=None
+
+        print(self._file.load())
+
+        for username, password in self._file.load().items():
+            username=username
+            password=password
+            user=User(username, password)
+            self._users.append(user)
+                
     
 
     def login_instructions(self):
@@ -44,9 +54,9 @@ class ExerciseApplication():
 
     def create_user(self, username, password):
 
-        #Luo uuden käyttäjän ja kirjaa käyttäjän sisään.
+        #Luo uuden käyttäjän kirjaa käyttäjän sisään.
 
-        for user in self._users.get_all_users():
+        for user in self._users:
             if user.username == username:
                 raise ValueError (f"Username {username} already exists")
 
@@ -54,9 +64,9 @@ class ExerciseApplication():
                 raise ValueError ("Minimum password length is eight characters. Please try again.")
 
         user=User(username, password)
-        self._users.add_new_user(user)
+        self._users.append(user)
 
-        self_user=user
+        self._user=user
         return user
 
 
@@ -68,10 +78,10 @@ class ExerciseApplication():
         password = input("Password: ")
 
 
-        for user in self._users.get_all_users():
+        for user in self._users:
             if user.username == username:
                 if user.password == password:
-                    self_user=user
+                    self._user=user
                     print("Login successfully!")
                     return True
 

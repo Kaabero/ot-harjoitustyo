@@ -3,7 +3,7 @@ class User:
     Attributes:
         username: Merkkijonoarvo, joka kuvaa käyttäjän käyttäjätunnusta.
         password: Merkkijonoarvo, joka kuvaa käyttäjän salasanaa.
-        activities: Lista, joka pitää kirjaa käyttäjän lajeista
+       
     """
 
     def __init__(self, username, password):
@@ -11,11 +11,11 @@ class User:
         Args:
             username: Merkkijonoarvo, joka kuvaa käyttäjän käyttäjätunnusta.
             password: Merkkijonoarvo, joka kuvaa käyttäjän salasanaa.
-            activities: Lista, joka pitää kirjaa käyttäjän lajeista.
+            
         """
 
         self.username = username
         self.password = password
-        self.activities = []
+        
 
         

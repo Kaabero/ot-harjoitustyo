@@ -5,11 +5,10 @@ from user import User
 class TestExerciseApplication(unittest.TestCase):
     def setUp(self):
         self.application=ExerciseApplication()
-        user1=User("Eddy", "salasana1")
-        self.application._users.add_new_user(user1)
         
 
     def test_create_user_if_user_already_exists(self):
+        self.application.create_user("Eddy", "salasana1")
         
         with self.assertRaises(ValueError):
             self.application.create_user("Eddy", "salasana2")

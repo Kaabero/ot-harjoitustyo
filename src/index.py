@@ -1,5 +1,6 @@
 from exercise_application import ExerciseApplication
 
+
 def main():
     ExerciseApplication().execute()
 
