@@ -19,4 +19,7 @@ class TestExerciseApplication(unittest.TestCase):
         
         self.assertEqual(application.create_user("Lily", "salasana1").username, "Lily")
 
+    def test_creating_new_user_too_short_password(self):
+        with self.assertRaises(ValueError):
+            self.application.create_user("Eddy", "moi")
    
