@@ -11,7 +11,7 @@ class ExerciseApplication():
         self._file=FileService("users.txt")
         self._user=None
 
-        print(self._file.load())
+        
 
         for username, password in self._file.load().items():
             username=username

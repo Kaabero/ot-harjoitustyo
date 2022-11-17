@@ -1,10 +1,12 @@
 import unittest
 from exercise_application import ExerciseApplication
 from user import User
+from file_service import FileService
 
 class TestExerciseApplication(unittest.TestCase):
     def setUp(self):
         self.application=ExerciseApplication()
+        
         
 
     def test_create_user_if_user_already_exists(self):

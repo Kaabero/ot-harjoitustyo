@@ -1,6 +1,8 @@
 class FileService():
     def __init__(self, file):
         self.__file=file
+        with open(self.__file, "a") as tiedosto:
+            pass
 
     def load(self):
         users={}
