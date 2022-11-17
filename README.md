@@ -18,6 +18,14 @@ Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, as
 
 Suositellaan käytettäväksi vähintään Python-versiota 3.8.
 
+## Komentorivikomennot
+
+- Käynnistä ohjelma komennolla: poetry run invoke start
+
+- Suorita testit komennolla: poetry run invoke test
+
+- Luo testikattavuusraportti komennolla: poetry run invoke coverage-report
+
 
 
 
