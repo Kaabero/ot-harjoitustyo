@@ -4,3 +4,4 @@ htmlcov
 .vscode
 .pytest_cache
 src/users.txt
+users.txt
