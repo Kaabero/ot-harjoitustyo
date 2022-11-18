@@ -47,7 +47,10 @@ class ExerciseApplication():
                     break
 
             elif command == "2":
-                if self.login():
+                username = input("Username: ")
+                password = input("Password: ")
+
+                if self.login(username, password):
                     self.logged_in(self._user)
                     
                 else:
@@ -76,14 +79,10 @@ class ExerciseApplication():
         return True
 
 
-    def login(self):
+    def login(self, username, password):
 
         #Kirjaa käyttäjän sisään
         
-        username = input("Username: ")
-        password = input("Password: ")
-
-
         for user in self._users.get_all_users():
             if user.username == username:
                 if user.password == password:
