@@ -9,6 +9,5 @@
 - Lisätty Users -luokka, joka vastaa kaikista käyttäjistä
 - Lisätty Activity -luokka, joka vastaa yksittäisistä liikuntasuorituksista
 - Lisätty FileService -luokka, joka vastaa tiedostonkäsittelystä
-- Testattu, että käyttäjätunnuksen luominen palauttaa käyttäjän User -oliona
 - Testattu, että jo olemassaolevan käyttäjätunnuksen luonti aiheuttaa virheen
 - Testattu, että liian lyhyt salasana aiheuttaa virheen

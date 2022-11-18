@@ -12,3 +12,10 @@ class FileService():
                 users[parts[0]] = parts[1]
 
         return users
+
+    def save(self, users: list):
+
+        with open(self.__file, "w") as file:
+            for user in users:
+                file.write(f"{user.username};{user.password}" + "\n")
+
