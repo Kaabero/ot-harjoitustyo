@@ -2,7 +2,7 @@
 
 ## ExerciseDiary
 
-ExerciseDiary on Helsingin yliopiston Tietojenkäsittelytieteen kurssin **Ohjelmistotekniikka** harjoitustyö. 
+ExerciseDiary on Helsingin yliopiston Tietojenkäsittelytieteen kurssin *Ohjelmistotekniikka* harjoitustyö. 
 
 Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, asettaa liikuntatavoitteita ja seurata näiden tavoitteiden toteutumista. Sovellusta voi käyttää useampi rekisteröitynyt käyttäjä, joilla on kaikilla oma yksilöllinen päiväkirjansa ja omat tavoitteet.
 
