@@ -16,5 +16,4 @@
 - Käyttäjätunnusten ja salasanojen tallennus tiedostoon
 - Testattu, että liian lyhyen salasanan asettaminen ei onnistu ja palauttaa False
 - Testattu, että väärä salasana tai käyttäjätunnus kirjautuessa palauttaa False ja oikeat kirjautumistiedot True
-- Testattu, että sisäänkirjautuminen asettaa kirjautuneen käyttäjän käyttäjäksi
 
