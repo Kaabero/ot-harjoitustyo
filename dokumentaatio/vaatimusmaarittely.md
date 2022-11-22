@@ -25,7 +25,7 @@ ilmoittaa tästä
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä näkee kuluvan viikon liikuntasuorituksensa
+- Käyttäjä voi hakea kuluvan viikon liikuntasuorituksensa
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen
 	- Käyttäjä kirjaa liikuntalajin, keston ja päivämäärän
 - Käyttäjä voi kirjautua ulos istunnosta
