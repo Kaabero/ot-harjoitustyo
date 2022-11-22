@@ -33,7 +33,4 @@ class TestExerciseApplication(unittest.TestCase):
         self.assertFalse(self.application.login(
             "Katri", "salasana1"), "Test value is not false")
 
-    def test_login_sets_self_user(self):
-        self.application.create_user("Katri", "salasana2")
-        self.application.login("Katri", "salasana2")
-        self.assertEqual((self.application._user).username, "Katri")
+
