@@ -53,7 +53,6 @@ class ExerciseApplication():
                 self.login_instructions()
 
     def create_user(self, username, password):
-
         # Luo uuden käyttäjän ja kirjaa käyttäjän sisään.
 
         for user in self._users.get_all_users():
@@ -72,7 +71,6 @@ class ExerciseApplication():
         return True
 
     def login(self, username, password):
-
         # Kirjaa käyttäjän sisään
 
         for user in self._users.get_all_users():
@@ -81,7 +79,6 @@ class ExerciseApplication():
                     self._user = user
                     print("Login successfully!")
                     return True
-
         return False
 
     def logout(self):
@@ -91,6 +88,9 @@ class ExerciseApplication():
         sys.exit()
 
     def logged_in(self, user: User):
-        print(f"Tervetuloa {user.username}!")
+        print(f"Welcome {user.username}!")
+        print("Weekly activity: lisätään tilastot")
+
+
         # väliaikaisesti, poistetaan sovelluksen edetessä:
         self._file.save(self._users.get_all_users())
