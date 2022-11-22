@@ -12,9 +12,6 @@ class TestExerciseApplication(unittest.TestCase):
     def test_create_user_if_user_already_exists(self):
         
         self.assertFalse(self.application.create_user("Eddy", "salasana2"), "Test value is not false")
-
-    def test_creating_new_user_sets_self_user(self):
-        self.assertEqual((self.application._user).username, "Eddy")
       
     def test_creating_new_user_too_short_password(self):
         self.assertFalse(self.application.create_user("Katri", "moi"), "Test value is not false")

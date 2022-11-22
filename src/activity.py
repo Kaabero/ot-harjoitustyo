@@ -1,5 +1,5 @@
 import uuid
-from datetime import *
+from datetime import datetime
 
 class Activity:
     """Luokka, joka kuvaa yksittäistä liikuntasuoritusta
@@ -12,8 +12,7 @@ class Activity:
         activity_id: merkkijonoarvo, joka kuvaa tehtävän id:tä.
     """
 
-
-    def __init__(self, activity: str, date, duration: int, user, activity_id=None):
+    def __init__(self, activity: str, date: datetime, duration: int, user, activity_id=None):
         """Luokan konstruktori, joka luo uuden liikuntasuorituksen.
         Args:
             activity: merkkijonoarvo, joka kuvaa liikuntalajia
@@ -30,4 +29,3 @@ class Activity:
         self.duration=duration
         self.user=user
         self.id = activity_id or str(uuid.uuid4())
-

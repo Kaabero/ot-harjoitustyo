@@ -9,13 +9,5 @@ class Users():
     def get_all_users(self):
         return self._users
 
-    def add_new_user(self, user):
+    def add_new_user(self, user: User):
         self._users.append(user)
-        
-
-    
-
-    
-
-
-
