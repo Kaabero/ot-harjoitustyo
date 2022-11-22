@@ -7,7 +7,7 @@ from users import Users
 
 
 class ExerciseApplication():
-    """Sovelluslogiikasta vastaava luokka."""
+    #Käyttäjän kanssa kommunikoinnista vastaava luokka
 
     def __init__(self, file: str):
         self._users = Users()
@@ -90,6 +90,7 @@ class ExerciseApplication():
     def logged_in(self, user: User):
         print(f"Welcome {user.username}!")
         print("Weekly activity: lisätään tilastot")
+
 
 
         # väliaikaisesti, poistetaan sovelluksen edetessä:
