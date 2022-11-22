@@ -4,7 +4,7 @@
 | ------------- | -------- | ------------------------------------------- |
 | 9.11.2022     |    2     | Vaatimusmäärittelyä                         |
 | 15.11.2022    |    3,5   | Ensimmäiset toiminnallisuudet ja testit     |
-| 16.11.2022    |    1     | Testien muokkausta ja Users luokan luonti   |
+| 16.11.2022    |    1     | Testien muokkausta ja Users -luokan luonti   |
 | 17.11.2022    |    2     | Tietokannan ja tiedostonkäsittelyn kokeilua |
 | 18.11.2022    |    3     | Tiedostonkäsittelyä ja testien muokkausta   |
 | 22.11.2022    |    1     | Koodin siistimistä                          |
