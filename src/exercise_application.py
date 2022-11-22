@@ -9,9 +9,9 @@ from users import Users
 class ExerciseApplication():
     """Sovelluslogiikasta vastaava luokka."""
 
-    def __init__(self):
+    def __init__(self, file: str):
         self._users = Users()
-        self._file = FileService("users.txt")
+        self._file = FileService(file)
         self._user = None
 
         for loaded_username, loaded_password in self._file.load().items():

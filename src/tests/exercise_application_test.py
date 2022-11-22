@@ -6,7 +6,7 @@ from file_service import FileService
 
 class TestExerciseApplication(unittest.TestCase):
     def setUp(self):
-        self.application = ExerciseApplication()
+        self.application = ExerciseApplication("test.txt")
         self.application.create_user("Eddy", "salasana1")
 
     def test_create_user_if_user_already_exists(self):
