@@ -1,4 +1,4 @@
-# Työaikakirjanpitokäsite
+# Työaikakirjanpito
 
 | Päivä         | Aika (h) | Mitä tein                                   |
 | ------------- | -------- | ------------------------------------------- |
