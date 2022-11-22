@@ -1,10 +1,11 @@
 
 from user import User
 
+
 class Users():
 
     def __init__(self):
-        self._users=[]
+        self._users = []
 
     def get_all_users(self):
         return self._users

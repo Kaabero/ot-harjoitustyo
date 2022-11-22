@@ -1,6 +1,7 @@
 import uuid
 from datetime import datetime
 
+
 class Activity:
     """Luokka, joka kuvaa yksittäistä liikuntasuoritusta
 
@@ -24,8 +25,8 @@ class Activity:
                 Merkkijonoarvo, joka kuvaa tehtävän id:tä.
         """
 
-        self.activity=activity
-        self.date=date
-        self.duration=duration
-        self.user=user
+        self.activity = activity
+        self.date = date
+        self.duration = duration
+        self.user = user
         self.id = activity_id or str(uuid.uuid4())

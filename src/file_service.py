@@ -1,11 +1,11 @@
 class FileService():
     def __init__(self, file):
-        self.__file=file
-        with open(self.__file, "a"): # pylint: disable=unspecified-encoding
+        self.__file = file
+        with open(self.__file, "a"):  # pylint: disable=unspecified-encoding
             pass
 
     def load(self):
-        users={}
+        users = {}
         with open(self.__file, encoding="utf-8") as file:
             for row in file:
                 parts = row.strip().split(";")
