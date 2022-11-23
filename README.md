@@ -18,13 +18,21 @@ Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, as
 
 Suositellaan käytettäväksi vähintään Python-versiota 3.8.
 
+## Asennus
+
+- Aseta riippuvuudet komennolla: poetry install
+
+- Käynnistä ohjelma komennolla: poetry run invoke start
+
 ## Komentorivikomennot
 
 - Käynnistä ohjelma komennolla: poetry run invoke start
 
 - Suorita testit komennolla: poetry run invoke test
 
-- Luo testikattavuusraportti komennolla: poetry run invoke coverage-report
+- Luo testikattavuusraportti komennolla (raportti generoituu htmlcov-hakemistoon): poetry run invoke coverage-report
+
+- Suorita tiedoston .pylintrc määrittelemät tarkistukset komennolla: poetry run invoke lint
 
 
 
