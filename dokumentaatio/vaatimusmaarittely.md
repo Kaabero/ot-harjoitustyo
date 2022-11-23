@@ -37,7 +37,7 @@ toiminnallisuuksilla:
 
 - Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen keston tai liikuntamäärän 
 perusteella
-- Kirjautumisen jälkeen käyttäjä näkee viikottaisen liikuntasuorituksensa lisäksi tavoitteensa 
+- Kirjautumisen jälkeen käyttäjä voi hakea viikottaisen liikuntasuorituksensa lisäksi tavoitteensa 
 täyttymisen tilanteen kuluvalla viikolla
 - Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
 kesto tiettynä ajanjaksona)

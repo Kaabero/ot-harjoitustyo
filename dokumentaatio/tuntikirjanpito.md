@@ -8,5 +8,5 @@
 | 17.11.2022    |    2     | Tietokannan ja tiedostonkäsittelyn kokeilua |
 | 18.11.2022    |    3     | Tiedostonkäsittelyä ja testien muokkausta   |
 | 22.11.2022    |    3     | Koodin siistimistä ja korjauksia            |
-
+| 23.11.2022    |    1     | Tietokanta liikuntasuorituksia varten       |
 

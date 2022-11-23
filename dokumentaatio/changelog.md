@@ -6,7 +6,6 @@
 - Käyttäjä voi kirjautua sisään
 - Lisätty ExerciseApplication -luokka, joka vastaa kommunikoinnista käyttäjän kanssa
 - Lisätty User -luokka, joka vastaa yksittäisistä käyttäjistä
-- Lisätty Activity -luokka, joka vastaa yksittäisistä liikuntasuorituksista
 - Testattu, että jo olemassaolevan käyttäjätunnuksen luonti ei onnistu
 
 ## Viikko 3
@@ -16,4 +15,8 @@
 - Käyttäjätunnusten ja salasanojen tallennus tiedostoon
 - Testattu, että liian lyhyen salasanan asettaminen ei onnistu ja palauttaa False
 - Testattu, että väärä salasana tai käyttäjätunnus kirjautuessa palauttaa False ja oikeat kirjautumistiedot True
+
+## Viikko 4
+
+- Lisätty ExerciseDatabase -luokka, joka vastaa liikuntasuorituksista ja niiden tallentamisesta
 
