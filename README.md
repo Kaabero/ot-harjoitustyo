@@ -32,7 +32,7 @@ Suositellaan käytettäväksi vähintään Python-versiota 3.8.
 
 - Luo testikattavuusraportti komennolla (raportti generoituu htmlcov-hakemistoon): poetry run invoke coverage-report
 
-- Suorita tiedoston .pylintrc määrittelemät tarkistukset komennolla: poetry run invoke lint
+- Suorita tiedoston [.pylintrc](https://github.com/Kaabero/ot-harjoitustyo/blob/main/.pylintrc) määrittelemät tarkistukset komennolla: poetry run invoke lint
 
 
 
