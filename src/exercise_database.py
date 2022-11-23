@@ -3,8 +3,7 @@ import sqlite3
 from datetime import datetime
 
 db = sqlite3.connect("activities.db")
-db.isolation_level = None
-        
+db.isolation_level = None   
 
 class ExerciseDatabase():
     
