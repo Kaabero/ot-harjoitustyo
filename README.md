@@ -20,21 +20,21 @@ Suositellaan käytettäväksi vähintään Python-versiota 3.8.
 
 ## Asennus
 
-- Aseta riippuvuudet komennolla: poetry install
+- Aseta riippuvuudet komennolla: *poetry install*
 
-- Suorita vaadittavat alustustoimenpiteet komennolla: poetry run invoke build
+- Suorita vaadittavat alustustoimenpiteet komennolla: *poetry run invoke build*
 
-- Käynnistä ohjelma komennolla: poetry run invoke start
+- Käynnistä ohjelma komennolla: *poetry run invoke start*
 
 ## Komentorivikomennot
 
-- Käynnistä ohjelma komennolla: poetry run invoke start
+- Käynnistä ohjelma komennolla: *poetry run invoke start*
 
-- Suorita testit komennolla: poetry run invoke test
+- Suorita testit komennolla: *poetry run invoke test*
 
-- Luo testikattavuusraportti komennolla (raportti generoituu htmlcov-hakemistoon): poetry run invoke coverage-report
+- Luo testikattavuusraportti komennolla (raportti generoituu htmlcov-hakemistoon): *poetry run invoke coverage-report*
 
-- Suorita tiedoston [.pylintrc](https://github.com/Kaabero/ot-harjoitustyo/blob/main/.pylintrc) määrittelemät tarkistukset komennolla: poetry run invoke lint
+- Suorita tiedoston [.pylintrc](https://github.com/Kaabero/ot-harjoitustyo/blob/main/.pylintrc) määrittelemät tarkistukset komennolla: *poetry run invoke lint*
 
 
 
