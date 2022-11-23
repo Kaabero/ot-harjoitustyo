@@ -19,4 +19,5 @@
 ## Viikko 4
 
 - Lisätty ExerciseDatabase -luokka, joka vastaa liikuntasuorituksista ja niiden tallentamisesta
+- Käyttäjä voi kirjata uuden liikuntasuorituksen
 
