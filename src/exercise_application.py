@@ -1,21 +1,21 @@
 
 import sys
+from datetime import datetime
 from user import User
 from file_service import FileService
 from users import Users
 from exercise_database import ExerciseDatabase
-from datetime import datetime
+
 
 
 class ExerciseApplication():
-    #Käyttäjän kanssa kommunikoinnista vastaava luokka
+    # Käyttäjän kanssa kommunikoinnista vastaava luokka
 
     def __init__(self, file: str):
         self._users = Users()
         self._file = FileService(file)
         self._user = None
         self._exercises = ExerciseDatabase()
-        
 
         for loaded_username, loaded_password in self._file.load().items():
             username = loaded_username
@@ -92,15 +92,14 @@ class ExerciseApplication():
         sys.exit()
 
     def logged_in(self, user: User):
-        #Kirjautuneen käyttäjän toiminnot
+        # Kirjautuneen käyttäjän toiminnot
         print("")
         print(f"Welcome {user.username}!")
-        
+        self.logged_in_instructions()
+
         while True:
             print("")
-            self.logged_in_instructions()
-            print("")
-            command=input("What do you want to do? ")
+            command = input("What do you want to do? ")
 
             if command == "0":
                 self.logout()
@@ -129,26 +128,30 @@ class ExerciseApplication():
 
     def add_new_activity(self, user: User):
 
-        activity=input("Type of exercise: ")
-        dateinput=input("Date (YYYY-MM-DD): ")
-        print("Duration: ")
-        hours=int(input("hours: "))
-        minutes=int(input("minutes: "))
-        duration=60*hours+minutes
+        activity = input("Type of exercise: ")
+        if len(activity)<=1:
+            print("The name of activity is missing, please try again!")
+            return
+        dateinput = input("Date (YYYY-MM-DD): ")
         try:
-            parts=dateinput.split("-")
-            date=datetime(int(parts[0]), int(parts[1]), int(parts[2]))
-        except:
+            parts = dateinput.split("-")
+            date = datetime(int(parts[0]), int(parts[1]), int(parts[2]))
+        except BaseException:
             print("Invalid date, please try again!")
             return
-            
+
+        print("Duration: ")
         try:
-            id = self._exercises.add_new_activity(user.username, activity, date, duration)
-            print(f"Activity added successfully! This is your {id}. note!")
-        except:
-            print("Invalid inputs, please try again!")
+            hours = int(input("hours: "))
+            minutes = int(input("minutes: "))
+            duration = 60*hours+minutes
+        except ValueError:
+            print("Please, give hours and minutes numerically")
             return
-            
-        
+
+        self._exercises.add_new_activity(user.username, activity, date, duration)
+        print("Activity added successfully!")
+
+
     def get_all_activities(self, user: User):
         print(self._exercises.activities_by_user(user.username))

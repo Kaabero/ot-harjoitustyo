@@ -32,5 +32,3 @@ class TestExerciseApplication(unittest.TestCase):
 
         self.assertFalse(self.application.login(
             "Katri", "salasana1"), "Test value is not false")
-
-
