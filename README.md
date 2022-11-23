@@ -22,6 +22,8 @@ Suositellaan käytettäväksi vähintään Python-versiota 3.8.
 
 - Aseta riippuvuudet komennolla: poetry install
 
+- Suorita vaadittavat alustustoimenpiteet komennolla: poetry run invoke build
+
 - Käynnistä ohjelma komennolla: poetry run invoke start
 
 ## Komentorivikomennot
