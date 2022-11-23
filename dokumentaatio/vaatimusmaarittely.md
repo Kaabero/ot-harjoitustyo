@@ -15,20 +15,20 @@ Sovelluksella on ainoastaan yksi käyttäjärooli eli *normaali* käyttäjä.
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
-	- Käyttäjätunnuksen on oltava uniikki
-- Käyttäjä voi kirjautua järjestelmään 
-	- Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus 
-ja salasana 
+- Käyttäjä voi luoda järjestelmään käyttäjätunnuksen >tehty
+	- Käyttäjätunnuksen on oltava uniikki >tehty
+- Käyttäjä voi kirjautua järjestelmään >tehty
+	- Kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus  
+ja salasana >tehty
 	- Jos käyttäjätunnus tai salasana ovat väärin, järjestelmä 
-ilmoittaa tästä
+ilmoittaa tästä >tehty
 
 ### Kirjautumisen jälkeen
 
 - Käyttäjä voi hakea kuluvan viikon liikuntasuorituksensa
-- Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen
-	- Käyttäjä kirjaa liikuntalajin, keston ja päivämäärän
-- Käyttäjä voi kirjautua ulos istunnosta
+- Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen >tehty
+	- Käyttäjä kirjaa liikuntalajin, keston ja päivämäärän >tehty
+- Käyttäjä voi kirjautua ulos istunnosta >tehty
 
 ## Jatkokehitysideoita
 
@@ -37,7 +37,7 @@ toiminnallisuuksilla:
 
 - Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen keston tai liikuntamäärän 
 perusteella
-- Kirjautumisen jälkeen käyttäjä voi hakea viikottaisen liikuntasuorituksensa lisäksi tavoitteensa 
+- Kirjautumisen jälkeen käyttäjä voi nähdä kuluvan viikon liikuntasuorituksensa lisäksi tavoitteensa 
 täyttymisen tilanteen kuluvalla viikolla
 - Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
 kesto tiettynä ajanjaksona)
