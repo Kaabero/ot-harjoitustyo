@@ -1,64 +1,46 @@
 ```mermaid
  classDiagram
-      Pelaaja "2..8" -- "1" Pelilauta
-      Pelaaja ..> Nopat
-      Pelaaja -- Toiminnot
-      Pelaaja -- Pankki
-      Rakennukset ..> Pelilauta
-      Pelaaja ..> Rakennukset
-      Pelaaja ..> Kortit
-      Kortit ..> Toiminnot
-      Pelilauta ..> Pankki
-     
+      ExerciseApplication --> ExerciseDatabase
+      ExerciseApplication --> FileService
+      ExerciseApplication --> Users
+      ExerciseApplication "1" --> "*" User
+      Users ..> User
+      ExerciseDatabase ..> User
       
-      class Pelaaja{
-        string nappula
-        int rahasaldo
-        list omat_kadut
-        heita_noppia()
-        siirry_pelilaudalla()
-        hae_ruutu_pelilaudalla()
-        suorita toiminto()
-        maksa()
-        rakenna()
-        ota_kortti()
-        
-      } 
-      class Pelilauta {
-        list pelaajat
-        list ruudut
-        aseta_alkutilanne_pelilaudalla()
-        jaa_aloitusrahat_pelaajille()
-        paivita_pelilauta()
-        siirra_vuoro_seuraavalle_pelaajalle()
-        hae_vankila()
-        hae_aloitusruutu()
+      class ExerciseApplication {
+        Users users
+        FileService file
+        User user
+        ExerciseDatabase exercises
+        login_instructions()
+        execute()
+        create_user()
+        login()
+        logout()
+        logged_in()
+        logged_in_instructions()
+        add_new_activity()
+        get_all_activities()
       }
 
-      class Nopat {
-        list noppa1
-        list noppa2
-        heita()
+      class Users {
+        list users
+        get_all_users()
+        add_new_user()
       }
-      class Rakennukset {
-        string ruutu
-        int taloja
-        bool hotelli
-        rakenna_talo()
-        rakenna_hotelli()
+
+      class User {
+        string username
+        string password
       }
-      class Kortit {
-        list sattumat
-        list yhteismaat
-        nosta_sattuma()
-        nosta_yhteismaa()
-        
+      class FileService {
+        string file
+        load()
+        save()
       }
-      class Pankki {
-        int saldo
-        vastaanota_rahaa()
-        anna_rahaa()
+      class ExerciseDatabase {
+        add_new_activity()
+        activities_by_user()
       }
-        
      
 ```
