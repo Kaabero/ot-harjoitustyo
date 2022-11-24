@@ -4,7 +4,7 @@
 
 - Käyttäjä voi luoda uuden käyttäjätunnuksen
 - Käyttäjä voi kirjautua sisään
-- Lisätty ExerciseApplication -luokka, joka vastaa kommunikoinnista käyttäjän kanssa
+- Lisätty ExerciseApplication -luokka, joka vastaa kommunikoinnista käyttäjän kanssa ennen kirjautumista
 - Lisätty User -luokka, joka vastaa yksittäisistä käyttäjistä
 - Testattu, että jo olemassaolevan käyttäjätunnuksen luonti ei onnistu
 
@@ -19,5 +19,6 @@
 ## Viikko 4
 
 - Lisätty ExerciseDatabase -luokka, joka vastaa liikuntasuorituksista ja niiden tallentamisesta
+- Lisätty ExerciseDiary -luokka, joka vastaa kirjautuneen käyttäjän toiminnoista
 - Käyttäjä voi kirjata uuden liikuntasuorituksen
 
