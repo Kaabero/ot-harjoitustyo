@@ -2,27 +2,36 @@
 
 ```mermaid
  classDiagram
-      ExerciseApplication --> ExerciseDatabase
       ExerciseApplication --> FileService
       ExerciseApplication --> Users
+      ExerciseApplication --> ExerciseDiary
       ExerciseApplication "1" --> "*" User
       Users ..> User
       ExerciseDatabase ..> User
+      ExerciseDiary "1" --> "*" User
+      ExerciseDiary --> ExerciseDatabase
       
+      class ExerciseDiary {
+        User user
+        ExerciseDatabase exercises
+        start()
+        logged_in_instructions()
+        add_new_activity()
+        get_all_activities()
+        logout()
+      }
+        
       class ExerciseApplication {
         Users users
         FileService file
         User user
-        ExerciseDatabase exercises
         login_instructions()
         execute()
         create_user()
         login()
         logout()
         logged_in()
-        logged_in_instructions()
-        add_new_activity()
-        get_all_activities()
+
       }
 
       class Users {
