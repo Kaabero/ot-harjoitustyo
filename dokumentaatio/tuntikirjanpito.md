@@ -10,4 +10,5 @@
 | 22.11.2022    |    3     | Koodin siistimistä ja korjauksia            |
 | 23.11.2022    |    1     | Tietokanta liikuntasuorituksia varten       |
 | 23.11.2022    |    2     | Siistimistä ja käyttöliittymän muokkausta   |
-| yht.          |   17,5   |                                             |
+| 24.11.2022    |    1     | Luokkakaavio                                |
+| yht.          |   18,5   |                                             |
