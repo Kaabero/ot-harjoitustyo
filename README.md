@@ -14,6 +14,8 @@ Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, as
 
 [Changelog](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
+[Arkkitehtuuri](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
 ## Python -versio
 
 Suositellaan käytettäväksi vähintään Python-versiota 3.8.
