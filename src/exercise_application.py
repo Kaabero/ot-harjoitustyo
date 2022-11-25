@@ -32,7 +32,7 @@ class ExerciseApplication():
             print("")
             command = input("What do you want to do? ")
             if command == "0":
-                self.logout()
+                self.finish()
 
             if command == "1":
 
@@ -81,7 +81,7 @@ class ExerciseApplication():
                     return True
         return False
 
-    def logout(self):
+    def finish(self):
         # Kirjaa nykyisen käyttäjän ulos.
         self._user = None
         self._file.save(self._users.get_all_users())

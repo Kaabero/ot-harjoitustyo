@@ -48,29 +48,49 @@ class ExerciseDiary():
     def add_new_activity(self):
 
         activity = input("Type of exercise: ")
+
+        if self.valid_activity(activity):
+            dateinput = input("Date (YYYY-MM-DD): ")
+
+            if self.valid_date(dateinput) is not False:
+                print("Duration: ")
+                hours = (input("hours: "))
+                minutes = (input("minutes: "))
+
+                if self.valid_duration(hours, minutes) is not False:
+                    self._exercises.add_new_activity(self._user.username, activity, \
+                        self.valid_date(dateinput), self.valid_duration(hours, minutes))
+                    print("Activity added successfully!")
+                    return True
+        return False
+
+    def valid_activity(self, activity:str):
+
         if len(activity)<=1:
-            print("The name of activity is missing, please try again!")
-            return
-        dateinput = input("Date (YYYY-MM-DD): ")
+            print("The name of activity is incomplete, please try again!")
+            return False
+
+        return True
+
+    def valid_date(self, dateinput: str):
         try:
             parts = dateinput.split("-")
             date = datetime(int(parts[0]), int(parts[1]), int(parts[2]))
+            return date
         except BaseException:
             print("Invalid date, please try again!")
-            return
+            return False
 
-        print("Duration: ")
+    def valid_duration(self, hours, minutes):
+
         try:
-            hours = int(input("hours: "))
-            minutes = int(input("minutes: "))
+            hours = int(hours)
+            minutes = int(minutes)
             duration = 60*hours+minutes
+            return duration
         except ValueError:
             print("Please, give hours and minutes numerically")
-            return
-
-        self._exercises.add_new_activity(self._user.username, activity, date, duration)
-        print("Activity added successfully!")
-
+            return False
 
     def get_all_activities(self):
         print(self._exercises.activities_by_user(self._user.username))

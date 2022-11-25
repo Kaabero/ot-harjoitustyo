@@ -11,4 +11,5 @@
 | 23.11.2022    |    1     | Tietokanta liikuntasuorituksia varten        |
 | 23.11.2022    |    2     | Siistimistä ja käyttöliittymän muokkausta    |
 | 24.11.2022    |    2     | Luokkakaavio ja ExerciseDiary -luokan luonti |
-| yht.          |   19,5   |                                              |
+| 25.11.2022    |   3,5    | Testejä ja koodin muokkausta                 |
+| yht.          |   23     |                                              |

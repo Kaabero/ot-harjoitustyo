@@ -32,3 +32,7 @@ class TestExerciseApplication(unittest.TestCase):
 
         self.assertFalse(self.application.login(
             "Katri", "salasana1"), "Test value is not false")
+
+    def test_finish_raises_system_exit(self):
+        with self.assertRaises(SystemExit):
+            self.application.finish()

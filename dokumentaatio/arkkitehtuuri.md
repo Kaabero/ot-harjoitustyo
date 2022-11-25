@@ -29,7 +29,7 @@
         execute()
         create_user()
         login()
-        logout()
+        finish()
         logged_in()
 
       }
