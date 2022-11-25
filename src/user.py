@@ -13,3 +13,7 @@ class User:
         """
         self.username = username
         self.password = password
+        self.weekly_target = None
+
+    def set_target(self, target):
+        self.weekly_target=target
