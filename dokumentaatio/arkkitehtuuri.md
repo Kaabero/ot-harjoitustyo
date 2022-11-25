@@ -17,6 +17,9 @@
         start()
         logged_in_instructions()
         add_new_activity()
+        valid_activity()
+        valid_date()
+        valid_duration()
         get_all_activities()
         logout()
       }
