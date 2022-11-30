@@ -19,6 +19,10 @@ class TestExerciseApplication(unittest.TestCase):
         self.assertFalse(self.application.create_user(
             "Katri", "moi"), "Test value is not false")
 
+    def test_creating_new_user_too_short_username(self):
+        self.assertFalse(self.application.create_user(
+            "K", "salasana1"), "Test value is not false")
+
     def test_login_return_true_with_correct_inputs(self):
 
         self.assertTrue(self.application.login(

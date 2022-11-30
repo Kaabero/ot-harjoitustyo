@@ -66,6 +66,9 @@ class ExerciseApplication():
             if user.username == username:
                 print(f"Username {username} already exists")
                 return False
+        if len(username) < 2:
+            print("Minimum username length is two characters. Please try again.")
+            return False
 
         if len(password) < 8:
             print("Minimum password length is eight characters. Please try again.")
@@ -163,7 +166,6 @@ class ExerciseApplication():
             return False
 
     def valid_duration(self, hours, minutes):
-
         try:
             hours = int(hours)
             minutes = int(minutes)
@@ -179,7 +181,7 @@ class ExerciseApplication():
     def current_week(self):
         activities = self._exercises.current_week_activities_by_user(
             self._user.username)
-        if self._user.weekly_target!="None":
+        if isinstance(self._user.weekly_target, int):
             print("")
             target=self._user.weekly_target
             print(f"Weekly target: You have done {len(activities)}/{target} exercises :)")
@@ -215,5 +217,15 @@ class ExerciseApplication():
         return f"{day}.{month}.{year}"
 
     def add_target(self):
-        target = int(input("Give the target amount for weekly exercises: "))
-        self._user.set_target(target)
+        target = input("Give the target amount for weekly exercises: ")
+        try:
+            target=int(target)
+
+        except ValueError:
+            print("Please, give target numerically")
+            return
+        if target>=0:
+            self._user.set_target(target)
+        else:
+            print("Please, give positive target number")
+            return
