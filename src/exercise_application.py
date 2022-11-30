@@ -158,7 +158,7 @@ class ExerciseApplication():
             parts = dateinput.split("-")
             date = datetime(int(parts[0]), int(parts[1]), int(parts[2]))
             return date
-        except BaseException:
+        except:
             print("Invalid date, please try again!")
             return False
 

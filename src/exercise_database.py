@@ -5,22 +5,22 @@ from datetime import timedelta
 
 
 # poistaa tietokannan alussa
-# os.remove("activities.db")
+#os.remove("activities.db")
 
 db = sqlite3.connect("activities.db")
 db.isolation_level = None
+
+try:
+    db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, activity TEXT, \
+                date DATE, duration INTEGER)")
+except:
+    print("")
 
 
 class ExerciseDatabase():
 
     def __init__(self):
-
-        try:
-            db.execute(
-                "CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, activity TEXT, \
-                date DATE, duration INTEGER)")
-        except BaseException:
-            return
+        pass
 
     def add_new_activity(self, username, activity, date: datetime, duration):
         activity = db.execute("INSERT INTO Activities (username, activity, date, \
