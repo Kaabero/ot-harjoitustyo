@@ -15,7 +15,8 @@ class ExerciseDatabase():
 
     def __init__(self):
         try:
-            db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, activity TEXT, date DATE, duration INTEGER)")
+            db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, \
+            activity TEXT, date DATE, duration INTEGER)")
         except:
             return
 

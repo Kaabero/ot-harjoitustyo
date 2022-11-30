@@ -179,7 +179,7 @@ class ExerciseApplication():
     def current_week(self):
         activities = self._exercises.current_week_activities_by_user(
             self._user.username)
-        if self._user.weekly_target is not None:
+        if self._user.weekly_target!="None":
             print("")
             target=self._user.weekly_target
             print(f"Weekly target: You have done {len(activities)}/{target} exercises :)")
