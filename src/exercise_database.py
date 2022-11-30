@@ -14,10 +14,13 @@ db.isolation_level = None
 class ExerciseDatabase():
 
     def __init__(self):
+        pass
+
+    def create_tables(self):
         try:
             db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, activity TEXT, date DATE, duration INTEGER)")
         except:
-            print("")
+            return
 
     def add_new_activity(self, username, activity, date: datetime, duration):
         activity = db.execute("INSERT INTO Activities (username, activity, date, \
