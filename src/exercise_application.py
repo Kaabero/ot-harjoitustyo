@@ -13,7 +13,10 @@ class ExerciseApplication():
         self._file = FileService(file)
         self._user = None
         self._exercises = ExerciseDatabase()
-        self._exercises.create_tables()
+        try:
+            self._exercises.create_tables()
+        except:
+            print("")
 
         for loaded_username, data in self._file.load().items():
             username = loaded_username

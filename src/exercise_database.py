@@ -17,10 +17,7 @@ class ExerciseDatabase():
         pass
 
     def create_tables(self):
-        try:
-            db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, activity TEXT, date DATE, duration INTEGER)")
-        except:
-            return
+        db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, activity TEXT, date DATE, duration INTEGER)")
 
     def add_new_activity(self, username, activity, date: datetime, duration):
         activity = db.execute("INSERT INTO Activities (username, activity, date, \
