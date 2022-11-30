@@ -43,3 +43,25 @@
       }
      
 ```
+
+
+# Sekvenssikaavio
+
+Kun käyttäjä painaa ohjelman käynnistyksen jälkeen painiketta "2" kirjautuakseen sisään jo luoduilla käyttäjätunnuksilla, kirjautuminen etenee seuraavasti:
+
+```mermaid
+sequenceDiagram
+  actor Person
+  participant ExerciseApplication
+  participant Users
+  participant User
+  Person->>ExerciseApplication: Press "2" button for login
+  ExerciseApplication->ExerciseApplication: login("Katri", "salasana")
+  ExerciseApplication->>Users: get_all_users()
+  Users->>User: username()
+  User-->>Users: Katri
+  Users->>User: password()
+  User-->>Users: salasana
+  Users-->>ExerciseApplication: user
+  ExerciseApplication->ExerciseApplication: logged_in(user)
+```
