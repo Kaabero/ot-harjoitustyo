@@ -25,7 +25,7 @@ ilmoittaa tästä >tehty
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä voi hakea kuluvan viikon liikuntasuorituksensa
+- Käyttäjä voi hakea kuluvan viikon liikuntasuorituksensa >tehty
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen >tehty
 	- Käyttäjä kirjaa liikuntalajin, keston ja päivämäärän >tehty
 - Käyttäjä voi kirjautua ulos istunnosta >tehty
@@ -35,10 +35,10 @@ ilmoittaa tästä >tehty
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla 
 toiminnallisuuksilla:
 
-- Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen keston tai liikuntamäärän 
-perusteella
+- Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen liikuntamäärän 
+perusteella >tehty
 - Kirjautumisen jälkeen käyttäjä voi nähdä kuluvan viikon liikuntasuorituksensa lisäksi tavoitteensa 
-täyttymisen tilanteen kuluvalla viikolla
+täyttymisen tilanteen kuluvalla viikolla >tehty
 - Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
 kesto tiettynä ajanjaksona)
 - Käyttäjä kirjaa liikuntasuoritukseen myös suorituksen rankkuusasteen annetulla asteikolla ja fiilksen annetulla asteikolla ja voi hakea tilastoja näiden perusteella

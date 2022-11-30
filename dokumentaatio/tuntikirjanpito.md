@@ -10,6 +10,8 @@
 | 22.11.2022    |    3     | Koodin siistimistä ja korjauksia             |
 | 23.11.2022    |    1     | Tietokanta liikuntasuorituksia varten        |
 | 23.11.2022    |    2     | Siistimistä ja käyttöliittymän muokkausta    |
-| 24.11.2022    |    2     | Luokkakaavio ja ExerciseDiary -luokan luonti |
+| 24.11.2022    |    2     | Luokkakaavio ja liikuntasuoritusten kirjaus  |
 | 25.11.2022    |   3,5    | Testejä ja koodin muokkausta                 |
-| yht.          |   23     |                                              |
+| 30.11.2022    |   4      | Kuluvan viikon haku ja tavoitteen tallennus  |
+| 30.11.2022    |   1      | Korjauksia sovelluslogiikkaan                |
+| yht.          |   27     |                                              |

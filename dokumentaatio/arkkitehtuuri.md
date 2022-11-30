@@ -4,37 +4,18 @@
  classDiagram
       ExerciseApplication --> FileService
       ExerciseApplication --> Users
-      ExerciseApplication --> ExerciseDiary
+      ExerciseApplication --> ExerciseDatabase
       ExerciseApplication "1" --> "*" User
       Users ..> User
       ExerciseDatabase ..> User
-      ExerciseDiary "1" --> "*" User
-      ExerciseDiary --> ExerciseDatabase
       
-      class ExerciseDiary {
-        User user
-        ExerciseDatabase exercises
-        start()
-        logged_in_instructions()
-        add_new_activity()
-        valid_activity()
-        valid_date()
-        valid_duration()
-        get_all_activities()
-        logout()
-      }
+      
         
       class ExerciseApplication {
         Users users
+	ExerciseDatabase exercises
         FileService file
         User user
-        login_instructions()
-        execute()
-        create_user()
-        login()
-        finish()
-        logged_in()
-
       }
 
       class Users {
@@ -46,6 +27,9 @@
       class User {
         string username
         string password
+        int weekly_target
+        set_target()
+
       }
       class FileService {
         string file
@@ -55,6 +39,7 @@
       class ExerciseDatabase {
         add_new_activity()
         activities_by_user()
+        current_week_activities_by_user()
       }
      
 ```

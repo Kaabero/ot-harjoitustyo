@@ -19,12 +19,17 @@
 ## Viikko 4
 
 - Lisätty ExerciseDatabase -luokka, joka vastaa liikuntasuorituksista ja niiden tallentamisesta
-- Lisätty ExerciseDiary -luokka, joka vastaa kirjautuneen käyttäjän toiminnoista
+- Lisätty ExerciseDiary -luokka, joka vastaa kirjautuneen käyttäjän toiminnoista (poistettu myöhemmin)
 - Käyttäjä voi kirjata uuden liikuntasuorituksen
 - Testattu, että epäkelvot syötteet liikuntasuorituksen lisäämisessä palauttavat False
 - Testattu, että oikein syötetty päivämäärä palauttaa päivämääräolion
 - Testattu, että oikein syötetyt liikuntasuorituksen kestoa kuvaavat syötteet palauttavat keston minuuteissa
 - Testattu, että liikuntasuorituksen onnistunut lisääminen tietokantaan palauttaa True
 - Testattu, että tietyn käyttäjän kaikkien liikuntasuoritusten haku palauttaa tässä vaiheessa listan
-- Testattu, että sys.exit() toimii
 
+## Viikko 5
+
+- Käyttäjä voi nähdä kuluvan viikon liikuntasuorituksensa
+- Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen
+- Liikuntatavoite tallentuu samaan tiedostoon käyttäjänimen ja salasanan kanssa
+- Testattu, että tavoitteen lisääminen asettaa tavoitteen arvon user -olion muuttujaan 
