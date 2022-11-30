@@ -14,4 +14,5 @@
 | 25.11.2022    |   3,5    | Testejä ja koodin muokkausta                      |
 | 30.11.2022    |   4      | Kuluvan viikon haku ja tavoitteen tallennus       |
 | 30.11.2022    |   3      | Korjauksia sovelluslogiikkaan ja releasen testaus |
-| yht.          |   30     |                                                   |
+| 30.11.2022    |   1      | Sekvenssikaavio                                   |
+| yht.          |   31     |                                                   |
