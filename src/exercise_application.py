@@ -1,3 +1,4 @@
+import sys
 from user import User
 from exercise_service import ExerciseService
 
@@ -26,7 +27,7 @@ class ExerciseApplication():
             if command == "0":
                 self._user = None
                 self._service.save()
-                break
+                sys.exit()
 
             if command == "1":
                 username, password = self.get_username_and_password()
@@ -63,7 +64,7 @@ class ExerciseApplication():
 
             if command == "0":
                 self._service.save()
-                break
+                sys.exit()
             if command == "1":
                 self.add_new_activity(user)
             if command == "2":
