@@ -4,7 +4,7 @@
 
 - Käyttäjä voi luoda uuden käyttäjätunnuksen
 - Käyttäjä voi kirjautua sisään
-- Lisätty ExerciseApplication -luokka, joka vastaa kommunikoinnista käyttäjän kanssa ennen kirjautumista
+- Lisätty ExerciseApplication -luokka, joka vastaa kommunikoinnista käyttäjän kanssa
 - Lisätty User -luokka, joka vastaa yksittäisistä käyttäjistä
 - Testattu, että jo olemassaolevan käyttäjätunnuksen luonti ei onnistu
 
@@ -13,7 +13,7 @@
 - Lisätty Users -luokka, joka vastaa kaikista käyttäjistä
 - Lisätty FileService -luokka, joka vastaa tiedostonkäsittelystä
 - Käyttäjätunnusten ja salasanojen tallennus tiedostoon
-- Testattu, että liian lyhyen salasanan asettaminen ei onnistu ja palauttaa False
+- Testattu, että liian lyhyen salasanan asettaminen ei onnistu
 - Testattu, että väärä salasana tai käyttäjätunnus kirjautuessa palauttaa False ja oikeat kirjautumistiedot True
 
 ## Viikko 4
@@ -33,3 +33,9 @@
 - Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen
 - Liikuntatavoite tallentuu samaan tiedostoon käyttäjänimen ja salasanan kanssa
 - Testattu, että tavoitteen lisääminen asettaa tavoitteen arvon user -olion muuttujaan 
+
+## Viikko 6
+
+- Eriytetty käyttöliittymää ja sovelluslogiikkaa
+- Luotu luokka ExerciseService, joka vastaa sovelluslogiikasta
+- Korjattu testejä niin, etteivät testit kysy käyttäjältä syötteitä ja ovat automaattisia
