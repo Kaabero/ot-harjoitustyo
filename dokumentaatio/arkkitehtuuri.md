@@ -2,20 +2,36 @@
 
 ```mermaid
  classDiagram
-      ExerciseApplication --> FileService
-      ExerciseApplication --> Users
-      ExerciseApplication --> ExerciseDatabase
-      ExerciseApplication "1" --> "*" User
+ 
       Users ..> User
       ExerciseDatabase ..> User
+      ExerciseApplication --> ExerciseService
+      ExerciseService --> FileService
+      ExerciseApplication ..> User
+      ExerciseService --> Users
+      ExerciseService --> ExerciseDatabase
       
       
-        
       class ExerciseApplication {
+        ExerciseService service
+        User user
+	login_instructions()
+	execute()
+	get_username_and_password()
+	logged_in()
+	logged_in_instructions()
+	add_new_activity()
+      }
+      
+      class ExerciseService {
         Users users
 	ExerciseDatabase exercises
         FileService file
-        User user
+	save()
+	create_user()
+	login()
+	current_week()
+	add_target()
       }
 
       class Users {
@@ -53,15 +69,17 @@ Kun käyttäjä painaa ohjelman käynnistyksen jälkeen painiketta "2" kirjautua
 sequenceDiagram
   actor Person
   participant ExerciseApplication
+  participant ExerciseService
   participant Users
   participant User
   Person->>ExerciseApplication: Press "2" button for login
-  ExerciseApplication->ExerciseApplication: login("Katri", "salasana")
-  ExerciseApplication->>Users: get_all_users()
+  ExerciseApplication->>ExerciseService: login("Katri", "salasana")
+  ExerciseService->>Users: get_all_users()
   Users->>User: username()
   User-->>Users: Katri
   Users->>User: password()
   User-->>Users: salasana
-  Users-->>ExerciseApplication: user
+  Users-->>ExerciseService: user
+  ExerciseService-->>ExerciseApplication: user
   ExerciseApplication->ExerciseApplication: logged_in(user)
 ```
