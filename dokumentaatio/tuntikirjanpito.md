@@ -17,5 +17,7 @@
 | 30.11.2022    |   1      | Sekvenssikaavio                                   |
 | 7.12.2022     |   2      | Käyttöliittymän ja sovelluslogiikan eriyttäminen  |
 | 7.12.2022     |   1      | Testien, luokkakaavion ja sekvenssikaavion korjaus|
-| yht.          |   34     |                                                   |
+| 7.12.2022     |   2      | Koodin docstring-dokumentointi                    |
+| yht.          |   36     |                                                   |
+
 
