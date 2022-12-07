@@ -2,7 +2,7 @@ from exercise_application import ExerciseApplication
 
 
 def main():
-    ExerciseApplication("users.txt").execute()
+    ExerciseApplication().execute()
 
 
 if __name__ == "__main__":
