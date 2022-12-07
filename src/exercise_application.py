@@ -4,9 +4,10 @@ from exercise_service import ExerciseService
 
 
 class ExerciseApplication():
-    # Käyttäjän kanssa kommunikoinnista vastaava luokka
+    """Luokka, joka vastaa kommunikoinnista käyttäjän kanssa."""
 
     def __init__(self):
+        """Luokan konstruktori, joka luo uuden käyttöliittymästä vastaavan luokan."""
 
         self._service = ExerciseService("users.txt")
         self._user = None
@@ -19,6 +20,7 @@ class ExerciseApplication():
         print("Press 2 to login")
 
     def execute(self):
+        """Käyttöliittymän käynnistys."""
 
         self.login_instructions()
         while self._user is None:
@@ -47,12 +49,18 @@ class ExerciseApplication():
                 self.login_instructions()
 
     def get_username_and_password(self):
+        """Palauttaa käyttäjän syöttämät tunnukset"""
+
         username = input("Username: ")
         password = input("Password: ")
         return username, password
 
     def logged_in(self, user: User):
-        # Kirjautuneen käyttäjän toiminnot
+        """Kirjautuneen käyttäjän toiminnot
+
+        Args:
+            user: Kirjautunut käyttäjä User -oliona
+        """
 
         print("")
         print(f"Welcome {user.username}!")
@@ -88,6 +96,14 @@ class ExerciseApplication():
         print("Press 4 for stats")
 
     def add_new_activity(self, user: User):
+        """Kysyy käyttäjältä tiedot uudesta liikuntasuorituksesta
+
+        Args:
+            user: Kirjautunut käyttäjä User -oliona
+
+        Returns:
+            True, jos syötteet ovat kelvolliset, muussa tapauksessa False.
+        """
 
         activity = input("Type of exercise: ")
 

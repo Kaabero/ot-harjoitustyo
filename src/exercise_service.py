@@ -6,8 +6,19 @@ from exercise_database import ExerciseDatabase
 
 
 class ExerciseService():
+    """Luokka, joka vastaa sovelluslogiikasta.
+
+    Attributes:
+        file: Merkkijonoarvo, joka kuvaa tiedoston nimeä, johon käyttäjien tiedot tallennetaan.
+    """
 
     def __init__(self, file: str):
+        """Luokan konstruktori, joka luo uuden sovelluslogiikasta vastaavan palvelun.
+
+        Args:
+            file: Merkkijonoarvo, joka kuvaa tiedoston nimeä, johon käyttäjien tiedot tallennetaan.
+        """
+
         self._users = Users()
         self._file = FileService(file)
         self.exercises = ExerciseDatabase()
@@ -21,11 +32,21 @@ class ExerciseService():
             self._users.add_new_user(user)
 
     def save(self):
+        """Tallentaa käyttäjien tiedot tiedostoon."""
         self._file.save(self._users.get_all_users())
 
 
     def create_user(self, username, password):
-        # Luo uuden käyttäjän ja kirjaa käyttäjän sisään.
+        """Luo uuden käyttäjän.
+
+        Args:
+            username: Merkkijonoarvo, joka kuvaa käyttäjän syöttämää käyttäjätunnusta
+            password: Merkkijonoarvo, joka kuvaa käyttäjän syöttämää salasanaa
+
+        Returns:
+            Palauttaa luodun käyttäjän user -oliona, jos käyttäjänimi ja salasana kelpaavat.
+            Muuten palauttaa None.
+        """
 
         if len(username) < 2:
             print("Minimum username length is two characters. Please try again.")
@@ -45,7 +66,16 @@ class ExerciseService():
         return user
 
     def login(self, username, password):
-        # Kirjaa käyttäjän sisään
+        """Kirjaa käyttäjän sisään.
+
+        Args:
+            username: Merkkijonoarvo, joka kuvaa käyttäjän syöttämää käyttäjätunnusta
+            password: Merkkijonoarvo, joka kuvaa käyttäjän syöttämää salasanaa
+
+        Returns:
+            Palauttaa käyttäjän user -oliona, jos käyttäjätunnus ja salasana täsmäävät.
+            Muuten palauttaa False.
+        """
 
         for user in self._users.get_all_users():
             if user.username == username:
@@ -54,6 +84,14 @@ class ExerciseService():
         return False
 
     def valid_activity(self, activity: str):
+        """Tarkastaa, kelpaako liikuntasuoritusen kuvaus.
+
+        Args:
+            activity: Liikuntasuorutuksen kuvaus merkkijonona.
+
+        Returns:
+            Palauttaa True, jos kuvaus kelpaa. Muutoin palauttaa False.
+        """
 
         if len(activity) <= 1:
             print("The name of activity is incomplete, please try again!")
@@ -62,6 +100,15 @@ class ExerciseService():
         return True
 
     def valid_date(self, dateinput: str):
+        """Tarkastaa, kelpaako päivämäärä.
+
+        Args:
+            dateinput: Päivämäärä merkkijonona.
+
+        Returns:
+            Palauttaa päivämääräolion, jos päivämäärä kelpaa. Muutoin palauttaa False.
+        """
+
         try:
             parts = dateinput.split("-")
             date = datetime(int(parts[0]), int(parts[1]), int(parts[2]))
@@ -71,6 +118,16 @@ class ExerciseService():
             return False
 
     def valid_duration(self, hours, minutes):
+        """Tarkastaa, kelpaako liikuntasuoritusen kesto.
+
+        Args:
+            hours: Liikuntasuorutuksen kesto tunteina.
+            minutes: Liikuntasuorituksen kesto minuutteina.
+
+        Returns:
+            Palauttaa liikuntasuorituksen keston minuutteina, jos syötteet kelpaavat.
+            Muutoin palauttaa False.
+        """
         try:
             hours = int(hours)
             minutes = int(minutes)
@@ -81,6 +138,12 @@ class ExerciseService():
             return False
 
     def current_week(self, user: User):
+        """Näyttää käyttäjän kuluvan viikon liikuntasuoritukset.
+
+        Args:
+            user: User -olio, joka kuvaa kirjautunutta käyttäjää.
+        """
+
         activities = self.exercises.current_week_activities_by_user(
             user.username)
         if user.weekly_target !="None" and user.weekly_target is not None:
@@ -103,10 +166,25 @@ class ExerciseService():
             print("You haven't added any activity to this week yet")
 
     def get_all_activities(self, user: User):
+        """Hakee käyttäjän kaikki liikuntasuoritukset.
+
+        Args:
+            user: User -olio, joka kuvaa kirjautunutta käyttäjää.
+        """
+
         print(self.exercises.activities_by_user(user.username))
 
 
     def get_duration_in_hours_and_minutes(self, duration: int):
+        """Palauttaa liikuntasuorituksen keston tunteina ja minuutteina.
+
+        Args:
+            duration: Kokonaislukuarvo, joka kuvaa liikuntasuorituksen kestoa minuutteina.
+
+        Returns:
+            Palauttaa liikuntasuorituksen kestoa kuvaavan merkkijonon.
+        """
+
         hours = int(duration/60)
         minutes = duration % 60
         if hours > 0 and minutes > 0:
@@ -116,6 +194,15 @@ class ExerciseService():
         return f"{minutes} min"
 
     def get_date(self, date):
+        """Palauttaa päivämäärän muodossa dd.mm.vvvv.
+
+        Args:
+            date: päivämäärä -olio
+
+        Returns:
+            Palauttaa liikuntasuorituksen päivämäärää kuvaavan merkkijonon muodossa dd.mm.vvvv.
+        """
+
         parts = date.split("-")
         year = parts[0]
         month = parts[1]
@@ -123,6 +210,13 @@ class ExerciseService():
         return f"{day}.{month}.{year}"
 
     def add_target(self, user: User, target: str):
+        """Lisää käyttäjälle viikottaisen liikuntatavoitteen.
+
+        Args:
+            user: User -olio, joka kuvaa kirjautunutta käyttäjää.
+            target: kokonaislukuarvo, joka kuvaa tavoiteltavaa liikuntasuoritusten määrää.
+        """
+
         try:
             target=int(target)
 
