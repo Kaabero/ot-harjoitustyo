@@ -169,6 +169,7 @@ class ExerciseApplication():
         print("Press 3 to search by activity")
 
     def exit(self):
+        """Lopettaa istunnon ja tallentaa käyttäjätiedot."""
         self._user=None
         self._service.save()
         sys.exit()

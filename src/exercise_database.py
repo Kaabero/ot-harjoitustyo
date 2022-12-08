@@ -58,8 +58,10 @@ class ExerciseDatabase():
 
     def current_week_activities_by_user(self, username):
         """Palauttaa kaikki käyttäjän liikuntasuoritukset kuluvalta viikolta.
+
         Args:
             username: Käyttäjä, jonka suoritukset haetaan tietokannasta
+
         Returns:
             Palauttaa listan käyttäjän liikuntasuorituksista kuluvalla viikolla.
         """
@@ -69,11 +71,30 @@ class ExerciseDatabase():
         return activities
 
     def activities_by_date(self, username, datefrom: datetime, dateto: datetime):
+        """Palauttaa kaikki käyttäjän liikuntasuoritukset kuluvalta viikolta.
+
+        Args:
+            username: Käyttäjä, jonka suoritukset haetaan tietokannasta
+            datefrom: Päivämäärä -olio, joka kuvaa päivämäärää, josta alkaen tiedot haetaan.
+            dateto: Päivämäärä -olio, joka kuvaa päivämäärää, johon asti tiedot haetaan.
+
+        Returns:
+            Palauttaa listan käyttäjän liikuntasuorituksista annetulla aikavälillä.
+        """
         activities = db.execute("SELECT * FROM Activities WHERE username=? AND date BETWEEN \
         ? AND ? ORDER BY date", [username, datefrom, dateto]).fetchall()
         return activities
 
     def activities_by_activity(self, username, activity):
+        """Palauttaa kaikki käyttäjän tietyn liikuntalajin liikuntasuoritukset.
+
+        Args:
+            username: Käyttäjä, jonka suoritukset haetaan tietokannasta
+            activity: Merkkijono, joka kuvaa haettavaa liikuntalajia
+
+        Returns:
+            Palauttaa listan käyttäjän kyseisen lajin liikuntasuorituksista.
+        """
         activities = db.execute("SELECT * FROM Activities WHERE username=? \
         AND activity = ? ORDER BY date", [username, activity]).fetchall()
         return activities

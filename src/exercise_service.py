@@ -138,7 +138,7 @@ class ExerciseService():
             return False
 
     def current_week(self, user: User):
-        """Näyttää käyttäjän kuluvan viikon liikuntasuoritukset.
+        """Tulostaa käyttäjän kuluvan viikon liikuntasuoritukset.
 
         Args:
             user: User -olio, joka kuvaa kirjautunutta käyttäjää.
@@ -166,7 +166,7 @@ class ExerciseService():
             print("You haven't added any activity to this week yet")
 
     def get_all_activities(self, user: User):
-        """Hakee käyttäjän kaikki liikuntasuoritukset.
+        """Tulostaa käyttäjän kaikki liikuntasuoritukset tilastoina.
 
         Args:
             user: User -olio, joka kuvaa kirjautunutta käyttäjää.
@@ -201,10 +201,23 @@ class ExerciseService():
             print("No activities added.")
 
     def activities_by_date(self, user: User, datefrom: datetime, dateto: datetime):
+        """Tulostaa käyttäjän liikuntasuoritukset tietyllä aikavälillä.
+
+        Args:
+            user: User -olio, joka kuvaa kirjautunutta käyttäjää.
+            datefrom: Päivämäärä -olio, joka kuvaa päivämäärää, josta alkaen tiedot haetaan.
+            dateto: Päivämäärä -olio, joka kuvaa päivämäärää, johon asti tiedot haetaan.
+        """
 
         print(self.exercises.activities_by_date(user.username, datefrom, dateto))
 
     def activities_by_activity(self, user: User, activity: str):
+        """Tulostaa käyttäjän tietyn lajin liikuntasuoritukset.
+
+        Args:
+            user: User -olio, joka kuvaa kirjautunutta käyttäjää.
+            activity: Merkkijono, joka kuvaa haettavaa liikuntalajia
+        """
 
         print(self.exercises.activities_by_activity(user.username, activity))
 
