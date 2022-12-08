@@ -41,6 +41,5 @@ perusteella >tehty
 täyttymisen tilanteen kuluvalla viikolla >tehty
 - Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
 kesto tiettynä ajanjaksona)
-- Käyttäjä kirjaa liikuntasuoritukseen myös suorituksen rankkuusasteen annetulla asteikolla ja fiilksen annetulla asteikolla ja voi hakea tilastoja näiden perusteella
 - Käyttäjä voi poistaa liikuntasuorituksen
   
