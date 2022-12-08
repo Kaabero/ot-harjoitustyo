@@ -68,6 +68,15 @@ class ExerciseDatabase():
         ? AND ? ORDER BY date", [username, get_monday_midnight(), datetime.now()]).fetchall()
         return activities
 
+    def activities_by_date(self, username, datefrom: datetime, dateto: datetime):
+        activities = db.execute("SELECT * FROM Activities WHERE username=? AND date BETWEEN \
+        ? AND ? ORDER BY date", [username, datefrom, dateto]).fetchall()
+        return activities
+
+    def activities_by_activity(self, username, activity):
+        activities = db.execute("SELECT * FROM Activities WHERE username=? \
+        AND activity = ? ORDER BY date", [username, activity]).fetchall()
+        return activities
 
 def get_monday_midnight():
     """Palauttaa kuluvan viikon maanantain keskiyön päivämäärä -oliona."""

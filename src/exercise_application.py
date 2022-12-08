@@ -24,12 +24,11 @@ class ExerciseApplication():
 
         self.login_instructions()
         while self._user is None:
-            print("")
-            command = input("What do you want to do? ")
+
+            command=self.get_command()
+
             if command == "0":
-                self._user = None
-                self._service.save()
-                sys.exit()
+                self.exit()
 
             if command == "1":
                 username, password = self.get_username_and_password()
@@ -47,6 +46,11 @@ class ExerciseApplication():
                     continue
             if command not in "012":
                 self.login_instructions()
+
+    def get_command(self):
+        print("")
+        command = input("What do you want to do? ")
+        return command
 
     def get_username_and_password(self):
         """Palauttaa käyttäjän syöttämät tunnukset"""
@@ -67,12 +71,10 @@ class ExerciseApplication():
         self.logged_in_instructions()
 
         while True:
-            print("")
-            command = input("What do you want to do? ")
+            command = self.get_command()
 
             if command == "0":
-                self._service.save()
-                sys.exit()
+                self.exit()
             if command == "1":
                 self.add_new_activity(user)
             if command == "2":
@@ -81,8 +83,7 @@ class ExerciseApplication():
                 target = input("Give the target amount for weekly exercises: ")
                 self._service.add_target(user, target)
             if command == "4":
-                # väliaikaisesti, poistetaan sovelluksen edetessä:
-                self._service.get_all_activities(user)
+                self.stats(user)
             if command not in "01234":
                 self.logged_in_instructions()
 
@@ -123,3 +124,51 @@ class ExerciseApplication():
                     print("Activity added successfully!")
                     return True
         return False
+
+    def stats(self, user: User):
+        """Kysyy käyttäjältä tiedot halutuista tilastoista.
+
+        Args:
+            user: Kirjautunut käyttäjä User -oliona
+        """
+
+        print("")
+        self.stats_instructions()
+
+        while True:
+            command = self.get_command()
+
+            if command == "0":
+                self.logged_in_instructions()
+                break
+            if command == "1":
+                self._service.get_all_activities(user)
+            if command == "2":
+                print("Please, give the date range ")
+                datefrom = input("From: ")
+                if self._service.valid_date(datefrom):
+                    dateto = input("To: ")
+                    if self._service.valid_date(dateto):
+                        self._service.activities_by_date(user, self._service.valid_date(datefrom), \
+                        self._service.valid_date(dateto))
+
+            if command == "3":
+                activity = input("Please, give the type of exercise: ")
+                if self._service.valid_activity(activity):
+                    self._service.activities_by_activity(user, activity)
+
+            if command not in "0123":
+                self.stats_instructions()
+
+    def stats_instructions(self):
+        print("")
+        print("Instructions: ")
+        print("Press 0 to finish with stats")
+        print("Press 1 to see all activities added")
+        print("Press 2 to search by date")
+        print("Press 3 to search by activity")
+
+    def exit(self):
+        self._user=None
+        self._service.save()
+        sys.exit()

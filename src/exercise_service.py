@@ -172,8 +172,41 @@ class ExerciseService():
             user: User -olio, joka kuvaa kirjautunutta käyttäjää.
         """
 
-        print(self.exercises.activities_by_user(user.username))
+        activities = self.exercises.activities_by_user(user.username)
+        total_duration=0
+        activity_types={}
 
+        if len(activities) > 0:
+
+            for activity in activities:
+                total_duration+=activity[4]
+                if activity[2] not in activity_types:
+                    how_many_times=1
+                    duration=activity[4]
+                    activity_types[activity[2]]=[how_many_times, duration]
+                else:
+                    activity_types[activity[2]][0]+=1
+                    activity_types[activity[2]][1]+=activity[4]
+
+            print("")
+            duration=self.get_duration_in_hours_and_minutes(total_duration)
+
+            print(f"Number of activities added: {len(activities)}. Total duration: {duration}:")
+
+            for activity, data in activity_types.items():
+                duration_in_total=self.get_duration_in_hours_and_minutes(data[1])
+                print(f"{activity}: {data[0]} time(s), total duration: {duration_in_total}")
+
+        else:
+            print("No activities added.")
+
+    def activities_by_date(self, user: User, datefrom: datetime, dateto: datetime):
+
+        print(self.exercises.activities_by_date(user.username, datefrom, dateto))
+
+    def activities_by_activity(self, user: User, activity: str):
+
+        print(self.exercises.activities_by_activity(user.username, activity))
 
     def get_duration_in_hours_and_minutes(self, duration: int):
         """Palauttaa liikuntasuorituksen keston tunteina ja minuutteina.
