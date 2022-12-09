@@ -19,7 +19,7 @@
 | 7.12.2022     |   1      | Testien, luokkakaavion ja sekvenssikaavion korjaus|
 | 7.12.2022     |   2      | Koodin docstring-dokumentointi                    |
 | 8.12.2022     |   2      | Tilastojen haku -toiminto                         |
-| 9.12.2022     |   1      | Testejä                                           |
-| yht.          |   39     |                                                   |
+| 9.12.2022     |   3      | Testejä ja arkkitehtuurikuvausta                  |
+| yht.          |   42     |                                                   |
 
 
