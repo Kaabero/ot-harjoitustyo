@@ -21,7 +21,7 @@ class ExerciseService():
 
         self._users = Users()
         self._file = FileService(file)
-        self.exercises = ExerciseDatabase()
+        self._exercises = ExerciseDatabase()
 
         for loaded_username, data in self._file.load().items():
             username = loaded_username
@@ -82,6 +82,9 @@ class ExerciseService():
                 if user.password == password:
                     return user
         return False
+
+    def add_new_activity(self, user: User, activity, date: datetime, duration: int):
+        self._exercises.add_new_activity(user.username, activity, date, duration)
 
     def valid_activity(self, activity: str):
         """Tarkastaa, kelpaako liikuntasuoritusen kuvaus.
@@ -144,7 +147,7 @@ class ExerciseService():
             user: User -olio, joka kuvaa kirjautunutta käyttäjää.
         """
 
-        activities = self.exercises.current_week_activities_by_user(
+        activities = self._exercises.current_week_activities_by_user(
             user.username)
         if user.weekly_target !="None" and user.weekly_target is not None:
             print("")
@@ -172,7 +175,7 @@ class ExerciseService():
             user: User -olio, joka kuvaa kirjautunutta käyttäjää.
         """
 
-        activities = self.exercises.activities_by_user(user.username)
+        activities = self._exercises.activities_by_user(user.username)
         total_duration=0
         activity_types={}
 
@@ -209,7 +212,7 @@ class ExerciseService():
             dateto: Päivämäärä -olio, joka kuvaa päivämäärää, johon asti tiedot haetaan.
         """
 
-        print(self.exercises.activities_by_date(user.username, datefrom, dateto))
+        print(self._exercises.activities_by_date(user.username, datefrom, dateto))
 
     def activities_by_activity(self, user: User, activity: str):
         """Tulostaa käyttäjän tietyn lajin liikuntasuoritukset.
@@ -219,7 +222,7 @@ class ExerciseService():
             activity: Merkkijono, joka kuvaa haettavaa liikuntalajia
         """
 
-        print(self.exercises.activities_by_activity(user.username, activity))
+        print(self._exercises.activities_by_activity(user.username, activity))
 
     def get_duration_in_hours_and_minutes(self, duration: int):
         """Palauttaa liikuntasuorituksen keston tunteina ja minuutteina.

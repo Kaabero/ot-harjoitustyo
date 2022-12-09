@@ -42,7 +42,7 @@ class TestExerciseApplication(unittest.TestCase):
 
     def test_adding_new_activity_returns_true(self):
         user=User("Pertti", "salasana2")
-        self.assertTrue(self.service.exercises.add_new_activity(user.username, "running", datetime.now(), 60), "Test value is not true")
+        self.assertTrue(self.service._exercises.add_new_activity(user.username, "running", datetime.now(), 60), "Test value is not true")
 
     def test_invalid_activity_returns_false(self):
         self.assertFalse(self.service.valid_activity(
@@ -69,7 +69,7 @@ class TestExerciseApplication(unittest.TestCase):
 
     def test_getting_all_activities_returns_list(self):
         user=User("Pertti", "salasana2")
-        type1 = type(self.service.exercises.activities_by_user(
+        type1 = type(self.service._exercises.activities_by_user(
             user.username))
         self.assertEqual(type1, list)
 

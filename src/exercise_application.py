@@ -117,7 +117,7 @@ class ExerciseApplication():
                 minutes = (input("minutes: "))
 
                 if self._service.valid_duration(hours, minutes) is not False:
-                    self._service.exercises.add_new_activity(user.username, activity,
+                    self._service.add_new_activity(user, activity,
                                                      self._service.valid_date(
                                                          dateinput),
                                                      self._service.valid_duration(hours, minutes))
