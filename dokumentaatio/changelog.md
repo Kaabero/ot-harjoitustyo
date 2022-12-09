@@ -39,3 +39,4 @@
 - Eriytetty käyttöliittymää ja sovelluslogiikkaa
 - Luotu luokka ExerciseService, joka vastaa sovelluslogiikasta
 - Korjattu testejä niin, etteivät testit kysy käyttäjältä syötteitä ja ovat automaattisia
+- Käyttäjä voi hakea tilastot kaikista liikuntasuorituksistaan: eri lajien määrä ja kokonaiskesto
