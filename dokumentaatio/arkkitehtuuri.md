@@ -1,6 +1,6 @@
 # Arkkitehtuurikuvaus
 
-Sovelluksen kaikki koodi on samassa hakemistossa.  
+Ohjelman kaikki koodi on samassa hakemistossa.  
 
 ## Luokkakaavio
 
@@ -23,14 +23,14 @@ Luokka ExerciseApplication vastaa käyttäjän kanssa kommunikoinnista ja luokka
 
 Luokka ExerciseApplication vastaa kaikesta kommunikoinnista käyttäjän kanssa. Käyttöliittymä sisältää kaksi eri tilaa, joissa käyttäjä voi valita toimintonsa:
 
-- Aloitustila, jossa käyttäjä valitsee haluaako luoda uuden käyttäjätunnuksen, kirjautua sisään vai lopettaa sovelluksen käytön.
+- Aloitustila, jossa käyttäjä valitsee haluaako luoda uuden käyttäjätunnuksen, kirjautua sisään vai lopettaa ohjelman käytön.
 - Kirjautuneen käyttäjän tila, jossa käyttäjä valitsee, haluaako lisätä liikuntasuorituksen, nähdä viikottaiset suorituksensa, asettaa tavoitteen, nähdä tilastoja vai kirjautua ulos. 
 
 Käyttöliittymä kysyy käyttäjältä tarvittavia tietoja ja toteuttaa toiminnot kutsumalla ExerciseService -luokan metodeja. Tilastojen katselu avaa oman alitilansa, jossa käyttäjä voi hakea tilastoja eri tavoin. 
 
 ## Sovelluslogiikka
 
-Sovelluksen käynnistysksen yhteydessä luodaan luokan ExerciseService ainoa olio. ExerciseService -luokka sisältää kaikille käyttöliittymän toiminnoille oman metodin. Näitä metodeja ovat esimerkiksi: 
+Ohjelman käynnistysksen yhteydessä luodaan luokan ExerciseService ainoa olio. ExerciseService -luokka sisältää kaikille käyttöliittymän toiminnoille oman metodin. Näitä metodeja ovat esimerkiksi: 
 
 - create_user(username, password)
 - login(username, password)
@@ -45,13 +45,13 @@ ExerciseService -luokan metodit voivat kutsua muiden luokkien metodeja. Esimerki
 
 ## Tietojen pysyväistallennus
 
-Luokat FileService ja ExerciseDatabase huolehtivat tietojen pysyväistallennuksesta. FileService -luokka tallentaa käyttäjien tiedot (käyttäjätunnus, salasana, viikkotavoite) CSV -tiedostoon ja ExerciseDatabase -luokka tallentaa käyttäjien liikuntasuoritukset SQLite -tietokantaan.
+Luokat FileService ja ExerciseDatabase huolehtivat tietojen pysyväistallennuksesta. FileService -luokka tallentaa käyttäjien tiedot (käyttäjätunnus, salasana, viikkotavoite) tekstitiedostoon ja ExerciseDatabase -luokka tallentaa käyttäjien liikuntasuoritukset SQLite -tietokantaan.
 
 ### Tiedosto
 
-Sovellus tallettaa käyttäjien tiedot tiedostoon. Tiedoston nimi määritellään koodin sisällä ExerciseServise luokan parametrina ja tiedosto luodaan sovelluksen käynnistyksen yhteydessä file_service.py -tiedostossa. Tiedoston nimi on oletusarvoisesti "users.txt".
+Ohjelma tallettaa käyttäjien tiedot tiedostoon. Tiedoston nimi määritellään koodin sisällä ExerciseServise luokan parametrina ja tiedosto luodaan ohjelman käynnistyksen yhteydessä file_service.py -tiedostossa. Tiedoston nimi on oletusarvoisesti "users.txt".
 
-Sovellus tallettaa tehtävät CSV-tiedostoon seuraavassa formaatissa:
+Ohjelma tallettaa tehtävät tekstitiedostoon seuraavassa formaatissa:
 
 Irmeli;tämäonsalasana;None
 Pertti;tämäkinonsalasana;3
@@ -60,11 +60,11 @@ Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty). K
 
 ### SQLite-tietokanta
 
-Käyttäjien liikuntasuoritukset tallennetaan SQLite-tietokannan tauluun Activities, joka alustetaan exercise_database.py -tiedostossa sovelluksen käynnistyksen yhteydessä.
+Käyttäjien liikuntasuoritukset tallennetaan SQLite-tietokannan tauluun Activities, joka alustetaan exercise_database.py -tiedostossa ohjelman käynnistyksen yhteydessä.
 
 ## Esimerkki toimintalogiikasta
 
-Kuvataan seuraavaksi sovelluksen toimintalogiikkaa esimerkin kautta sekvenssikaaviona.
+Kuvataan seuraavaksi ohjelman toimintalogiikkaa esimerkin kautta sekvenssikaaviona.
 
 ### Käyttäjän kirjautuminen
 
