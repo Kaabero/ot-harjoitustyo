@@ -256,7 +256,7 @@ class ExerciseService():
             duration=self.get_duration_in_hours_and_minutes(total_duration)
 
             print("")
-            print(f"You have done activity '{activity}' {len(activities)} times.")
+            print(f"You have done activity '{activity}' {len(activities)} time(s).")
             print(f"Total duration: {duration}")
             print("")
 
