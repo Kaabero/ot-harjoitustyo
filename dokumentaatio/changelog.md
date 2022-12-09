@@ -44,3 +44,5 @@
 - Testattu, että liikuntasuorituksen keston muokkaus tunneiksi ja minuuteiksi toimii
 - Testattu, että päivämäärän muokkaus muotoon dd.mm.vvvv toimii
 - Testattu, että tavoitteen asettaminen epäkelvoilla syötteillä ei onnistu
+- Testattu, ettei ohjelma palauta mitään, jos tilastoja hakee päivämäärillä, joiden sisällä ei ole kirjauksia
+- Testattu, ettei ohjelma palauta mitään, jos tilastoja hakee liikuntalajilla, jolle ei ole tehty kirjauksia 

@@ -34,6 +34,6 @@ perusteella >tehty
 - Kirjautumisen jälkeen käyttäjä voi nähdä kuluvan viikon liikuntasuorituksensa lisäksi tavoitteensa 
 täyttymisen tilanteen kuluvalla viikolla >tehty
 - Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
-kesto tiettynä ajanjaksona) > osittain tehty
+kesto tiettynä ajanjaksona) > tehty
 
   

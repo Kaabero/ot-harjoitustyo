@@ -101,4 +101,14 @@ class TestExerciseApplication(unittest.TestCase):
     def test_getting_duration_in_minutes_returns_formated_duration(self):
         self.assertEqual(self.service.get_duration_in_hours_and_minutes(30), "30 min")
 
+    def test_getting_activities_by_date_no_activities(self):
+        user=User("Irmeli", "salasana2")
+        
+        self.assertEqual(self.service.activities_by_date(user, datetime.now(), datetime.now()), None)
+
+    def test_getting_activities_by_activity_no_activities(self):
+        user=User("Irmeli", "salasana2")
+        
+        self.assertEqual(self.service.activities_by_activity(user, "golf"), None)
+
     

@@ -159,16 +159,14 @@ class ExerciseService():
         activities = self._exercises.current_week_activities_by_user(
             user.username)
         if user.weekly_target !="None" and user.weekly_target is not None:
-            print("")
             target=user.weekly_target
             print(f"Weekly target: You have done {len(activities)}/{target} exercises :)")
         if len(activities) > 0:
             print("")
-            print("Your current week:")
             if len(activities) == 1:
-                print(f"You have added {len(activities)} activity")
+                print(f"You have added {len(activities)} activity:")
             else:
-                print(f"You have added {len(activities)} activities")
+                print(f"You have added {len(activities)} activities:")
             for activity in activities:
                 duration=self.get_duration_in_hours_and_minutes(activity[4])
                 date=self.get_date(activity[3])
@@ -178,7 +176,7 @@ class ExerciseService():
             print("You haven't added any activity to this week yet")
 
     def get_all_activities(self, user: User):
-        """Tulostaa käyttäjän kaikki liikuntasuoritukset tilastoina.
+        """Tulostaa yhteenvedon käyttäjän kaikista liikuntasuorituksista.
 
         Args:
             user: User -olio, joka kuvaa kirjautunutta käyttäjää.
@@ -200,10 +198,10 @@ class ExerciseService():
                     activity_types[activity[2]][0]+=1
                     activity_types[activity[2]][1]+=activity[4]
 
-            print("")
             duration=self.get_duration_in_hours_and_minutes(total_duration)
 
-            print(f"Number of activities added: {len(activities)}. Total duration: {duration}:")
+            print(f"Number of activities added: {len(activities)}, total duration: {duration}")
+            print("")
 
             for activity, data in activity_types.items():
                 duration_in_total=self.get_duration_in_hours_and_minutes(data[1])
@@ -221,7 +219,22 @@ class ExerciseService():
             dateto: Päivämäärä -olio, joka kuvaa päivämäärää, johon asti tiedot haetaan.
         """
 
-        print(self._exercises.activities_by_date(user.username, datefrom, dateto))
+        activities = self._exercises.activities_by_date(user.username, datefrom, dateto)
+
+        if len(activities) > 0:
+            date_from=self.get_date(str(datefrom))
+            date_to=self.get_date(str(dateto))
+            print("")
+            print(f"Your activities from {date_from} to {date_to}: ")
+
+            for activity in activities:
+                duration=self.get_duration_in_hours_and_minutes(activity[4])
+                date=self.get_date(activity[3])
+                print(
+                    f"Activity: {activity[2]}, date: {date}, duration: {duration}")
+        else:
+            print("No activities in the given time range")
+            return
 
     def activities_by_activity(self, user: User, activity: str):
         """Tulostaa käyttäjän tietyn lajin liikuntasuoritukset.
@@ -231,7 +244,30 @@ class ExerciseService():
             activity: Merkkijono, joka kuvaa haettavaa liikuntalajia
         """
 
-        print(self._exercises.activities_by_activity(user.username, activity))
+        activities=self._exercises.activities_by_activity(user.username, activity)
+
+        total_duration=0
+
+        if len(activities) > 0:
+
+            for record in activities:
+                total_duration+=record[4]
+
+            duration=self.get_duration_in_hours_and_minutes(total_duration)
+
+            print("")
+            print(f"You have done activity '{activity}' {len(activities)} times.")
+            print(f"Total duration: {duration}")
+            print("")
+
+            for record in activities:
+                duration=self.get_duration_in_hours_and_minutes(record[4])
+                date=self.get_date(record[3])
+                print(f"Activity: {record[2]}, date: {date}, duration: {duration}")
+
+        else:
+            print(f"No activities named '{activity}' added.")
+            return
 
     def get_duration_in_hours_and_minutes(self, duration: int):
         """Palauttaa liikuntasuorituksen keston tunteina ja minuutteina.
@@ -283,6 +319,7 @@ class ExerciseService():
             return
         if target>=0:
             user.set_target(target)
+            print("Target added successfully.")
         else:
             print("Please, give positive target number")
             return

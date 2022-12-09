@@ -50,6 +50,7 @@ class ExerciseApplication():
     def get_command(self):
         print("")
         command = input("What do you want to do? ")
+        print("")
         return command
 
     def get_username_and_password(self):
@@ -132,7 +133,6 @@ class ExerciseApplication():
             user: Kirjautunut käyttäjä User -oliona
         """
 
-        print("")
         self.stats_instructions()
 
         while True:
@@ -144,10 +144,10 @@ class ExerciseApplication():
             if command == "1":
                 self._service.get_all_activities(user)
             if command == "2":
-                print("Please, give the date range ")
-                datefrom = input("From: ")
+                print("Please, give the time range ")
+                datefrom = input("From (YYYY-MM-DD): ")
                 if self._service.valid_date(datefrom):
-                    dateto = input("To: ")
+                    dateto = input("To (YYYY-MM-DD): ")
                     if self._service.valid_date(dateto):
                         self._service.activities_by_date(user, self._service.valid_date(datefrom), \
                         self._service.valid_date(dateto))
@@ -161,7 +161,6 @@ class ExerciseApplication():
                 self.stats_instructions()
 
     def stats_instructions(self):
-        print("")
         print("Instructions: ")
         print("Press 0 to finish with stats")
         print("Press 1 to see all activities added")

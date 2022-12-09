@@ -20,6 +20,7 @@
 | 7.12.2022     |   2      | Koodin docstring-dokumentointi                    |
 | 8.12.2022     |   2      | Tilastojen haku -toiminto                         |
 | 9.12.2022     |   4      | Testejä, arkkitehtuurikuvausta ja käyttöohje      |
-| yht.          |   42     |                                                   |
+| 9.12.2022     |   1      | Lisää tilastotoimintoja                           |
+| yht.          |   43     |                                                   |
 
 
