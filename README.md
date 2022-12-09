@@ -10,11 +10,13 @@ Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, as
 
 [Vaatimusmäärittely](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+[Käyttöohje](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+
+[Arkkitehtuuri](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 [Changelog](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
-[Arkkitehtuuri](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+[Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 [Viikon 5 release](https://github.com/Kaabero/ot-harjoitustyo/releases/tag/viikko5)
 
