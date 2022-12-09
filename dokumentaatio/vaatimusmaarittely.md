@@ -1,15 +1,15 @@
 # Vaatimusmäärittely
 
-## Sovelluksen tarkoitus
+## Ohjelman tarkoitus
 
-Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, 
+Ohjelman avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, 
 asettaa liikuntatavoitteita ja seurata näiden tavoitteiden toteutumista. 
-Sovellusta voi käyttää useampi rekisteröitynyt käyttäjä, joilla on 
+Ohjelmaa voi käyttää useampi rekisteröitynyt käyttäjä, joilla on 
 kaikilla oma yksilöllinen päiväkirjansa ja omat tavoitteet.
 
 ## Käyttäjät
 
-Sovelluksella on ainoastaan yksi käyttäjärooli eli *normaali* käyttäjä. 
+Ohjelmalla on ainoastaan yksi käyttäjärooli eli *normaali* käyttäjä. 
 
 ## Perusversion tarjoama toiminnallisuus
 
@@ -29,17 +29,11 @@ ilmoittaa tästä >tehty
 - Käyttäjä voi kirjata uuden liikuntasuorituksen tietoineen >tehty
 	- Käyttäjä kirjaa liikuntalajin, keston ja päivämäärän >tehty
 - Käyttäjä voi kirjautua ulos istunnosta >tehty
-
-## Jatkokehitysideoita
-
-Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla 
-toiminnallisuuksilla:
-
 - Käyttäjä voi asettaa itselleen viikottaisen liikuntatavoitteen liikuntamäärän 
 perusteella >tehty
 - Kirjautumisen jälkeen käyttäjä voi nähdä kuluvan viikon liikuntasuorituksensa lisäksi tavoitteensa 
 täyttymisen tilanteen kuluvalla viikolla >tehty
 - Käyttäjä voi hakea tilastoja päivämäärien ja lajien perusteella (eri lajien suorituskertojen määrä ja 
 kesto tiettynä ajanjaksona) > osittain tehty
-- Käyttäjä voi poistaa liikuntasuorituksen
+
   
