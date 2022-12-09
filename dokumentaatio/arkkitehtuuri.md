@@ -17,60 +17,6 @@ Luokka ExerciseApplication vastaa käyttäjän kanssa kommunikoinnista ja luokka
       ExerciseApplication --> User
       ExerciseService --> Users
       ExerciseService --> ExerciseDatabase
-      
-      
-      class ExerciseApplication {
-        ExerciseService service
-        User user
-	login_instructions()
-	execute()
-	get_username_and_password()
-	logged_in()
-	logged_in_instructions()
-	add_new_activity()
-	stats()
-	exit()
-      }
-      
-      class ExerciseService {
-        Users users
-	ExerciseDatabase exercises
-        FileService file
-	save()
-	create_user()
-	login()
-	current_week()
-	add_target()
-	get_all_activities()
-	activities_by_date()
-	activities_by_activity()
-      }
-
-      class Users {
-        list users
-        get_all_users()
-        add_new_user()
-      }
-
-      class User {
-        string username
-        string password
-        int weekly_target
-        set_target()
-
-      }
-      class FileService {
-        string file
-        load()
-        save()
-      }
-      class ExerciseDatabase {
-        add_new_activity()
-        activities_by_user()
-        current_week_activities_by_user()
-	activities_by_date()
-	activities_by_activity()
-      }
      
 ```
 ## Käyttöliittymä
@@ -78,22 +24,49 @@ Luokka ExerciseApplication vastaa käyttäjän kanssa kommunikoinnista ja luokka
 Luokka ExerciseApplication vastaa kaikesta kommunikoinnista käyttäjän kanssa. Käyttöliittymä sisältää kaksi eri tilaa, joissa käyttäjä voi valita toimintonsa:
 
 - Aloitustila, jossa käyttäjä valitsee haluaako luoda uuden käyttäjätunnuksen, kirjautua sisään vai lopettaa sovelluksen käytön.
-- Kirjautumistila, jossa käyttäjä valitsee, haluaako lisätä liikuntasuorituksen, nähdä viikottaiset suorituksensa, asettaa tavoitteen, nähdä tilastoja vai kirjautua ulos. Tilastojen katselu avaa oman tilansa, jossa käyttäjä voi hakea tilastoja eri tavoin. 
+- Kirjautuneen käyttäjän tila, jossa käyttäjä valitsee, haluaako lisätä liikuntasuorituksen, nähdä viikottaiset suorituksensa, asettaa tavoitteen, nähdä tilastoja vai kirjautua ulos. 
 
-Käyttöliittymä kysyy käyttäjältä tarvittavia tietoja ja toteuttaa toiminnot kutsumalla ExerciseService -luokan metodeja.
+Käyttöliittymä kysyy käyttäjältä tarvittavia tietoja ja toteuttaa toiminnot kutsumalla ExerciseService -luokan metodeja. Tilastojen katselu avaa oman alitilansa, jossa käyttäjä voi hakea tilastoja eri tavoin. 
 
 ## Sovelluslogiikka
 
-Sovelluksen luokka Users kuvaa kaikkia käyttäjiä, luokka User kuvaa yskittäistä käyttäjää ja luokka ExerciseDatabase vastaa kaikkien käyttäjien liikuntasuoritusten tallennuksesta tietokantaan ja tietokantaoperaatioista. Toiminnallisuuksista näiden välillä vastaa luokan ExerciseService olio, joka sisältää metodit käyttöliittymän toiminnoille. Näitä metodeja ovat esimerkiksi: 
+Sovelluksen käynnistysksen yhteydessä luodaan luokan ExerciseService ainoa olio. ExerciseService -luokka sisältää kaikille käyttöliittymän toiminnoille oman metodin. Näitä metodeja ovat esimerkiksi: 
 
-create_user(username, password)
-login(username, password)
-current_week(user)
-get_all_activities(user)
-add_target(user, target)
+- create_user(username, password)
+- login(username, password)
+- add_new_activity(user, activity, date, duration)
+- current_week(user)
+- get_all_activities(user)
+- activities_by_activity(user, activity)
+- activities_by_date(user, datefrom, dateto)
+- add_target(user, target)
 
+ExerciseService -luokan metodit voivat kutsua muiden luokkien metodeja. Esimerkiksi metodi save(), kutsuu tiedoston käsittelystä vastaavan FileService -luokan metodia tallentaaksen tiedot tiedostoon. 
 
-## Sekvenssikaavio
+## Tietojen pysyväistallennus
+
+Luokat FileService ja ExerciseDatabase huolehtivat tietojen pysyväistallennuksesta. FileService -luokka tallentaa käyttäjien tiedot (käyttäjätunnus, salasana, viikkotavoite) CSV -tiedostoon ja ExerciseDatabase -luokka tallentaa käyttäjien liikuntasuoritukset SQLite -tietokantaan.
+
+### Tiedosto
+
+Sovellus tallettaa käyttäjien tiedot tiedostoon. Tiedoston nimi määritellään koodin sisällä ExerciseServise luokan parametrina ja tiedosto luodaan sovelluksen käynnistyksen yhteydessä file_service.py -tiedostossa. Tiedoston nimi on oletusarvoisesti "users.txt".
+
+Sovellus tallettaa tehtävät CSV-tiedostoon seuraavassa formaatissa:
+
+Irmeli;tämäonsalasana;None
+Pertti;tämäkinonsalasana;3
+
+Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty). Kenttien arvot erotellaan puolipisteellä (;).
+
+### SQLite-tietokanta
+
+Käyttäjien liikuntasuoritukset tallennetaan SQLite-tietokannan tauluun Activities, joka alustetaan exercise_database.py -tiedostossa sovelluksen käynnistyksen yhteydessä.
+
+## Esimerkki toimintalogiikasta
+
+Kuvataan seuraavaksi sovelluksen toimintalogiikkaa esimerkin kautta sekvenssikaaviona.
+
+### Käyttäjän kirjautuminen
 
 Kun käyttäjä painaa ohjelman käynnistyksen jälkeen painiketta "2" kirjautuakseen sisään jo luoduilla käyttäjätunnuksilla, kirjautuminen etenee seuraavasti:
 
@@ -115,3 +88,5 @@ sequenceDiagram
   ExerciseService-->>ExerciseApplication: user
   ExerciseApplication->ExerciseApplication: logged_in(user)
 ```
+
+Kun käyttäjä on painanut painiketta "2" kirjautuakseen sisään, käyttäliittymä kysyy käyttäjätunnusta ja salasanaa. Tämän jälkeen käyttöliittymä kutsuu ExerciseService -luokan metodia login() antaen parametriksi käyttäjän antamat käyttäjätunnus- ja salasanasyötteet. ExerciseService kutsuu Users -luokan metodia get_all_users() ja tarkastaa täsmääkö syötetty käyttätunnus mihinkään jo olemassa olevaan tunnukseen ja tämän jälkeen täsmääkö salasana. Jos käyttäjätunnus ja salasana täsmäävät, kirjautuminen onnistuu ja käyttöliittymä kutsuu omaa metodiaan logged_in(), joka saa parametrikseen kirjautuneen käyttäjän. 
