@@ -22,6 +22,9 @@ class TestExerciseApplication(unittest.TestCase):
         self.assertEqual(self.service.create_user(
             "K", "salasana1"), None)
 
+    def test_creating_new_user_with_correct_inputs_returns_user(self):
+        self.assertEqual((self.service.create_user("Katri", "salasana")).username, "Katri")
+
     def test_login_return_true_with_correct_inputs(self):
 
         self.assertTrue(self.service.login(
@@ -74,3 +77,28 @@ class TestExerciseApplication(unittest.TestCase):
         user=User("Pertti", "salasana2")
         self.service.add_target(user, "3")
         self.assertEqual(user.weekly_target, 3)
+
+    def test_adding_negative_target_returns_none(self):
+        user=User("Pertti", "salasana2")
+        self.service.add_target(user, "-1")
+        self.assertEqual(user.weekly_target, None)
+
+    def test_adding_alphabetical_target_returns_none(self):
+        user=User("Pertti", "salasana2")
+        self.service.add_target(user, "a")
+        self.assertEqual(user.weekly_target, None)
+
+    def test_getting_date_returns_formated_date(self):
+        date=str(datetime(2022, 11, 30))
+        self.assertEqual(self.service.get_date(date), "30.11.2022")
+
+    def test_getting_duration_in_hours_and_minutes_returns_formated_duration(self):
+        self.assertEqual(self.service.get_duration_in_hours_and_minutes(90), "1 h and 30 min")
+
+    def test_getting_duration_in_hours_returns_formated_duration(self):
+        self.assertEqual(self.service.get_duration_in_hours_and_minutes(60), "1 h")
+
+    def test_getting_duration_in_minutes_returns_formated_duration(self):
+        self.assertEqual(self.service.get_duration_in_hours_and_minutes(30), "30 min")
+
+    
