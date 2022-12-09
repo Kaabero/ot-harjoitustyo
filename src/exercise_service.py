@@ -84,6 +84,15 @@ class ExerciseService():
         return False
 
     def add_new_activity(self, user: User, activity, date: datetime, duration: int):
+        """Lisää uuden liikuntasuorituksen.
+
+        Args:
+            user: Kirjautunut käyttäjä User -oliona.
+            activity: Merkkijonoarvo, joka kuvaa liikuntasuorituksen tyyppiä
+            date: Päivämäärä -olio, joka kuvaa liikuntasuorituksen ajankohtaa
+            duration: Kokonaislukuarvo, joka kuvaa liikuntasuorituksen kestoa minuuteissa
+        """
+
         self._exercises.add_new_activity(user.username, activity, date, duration)
 
     def valid_activity(self, activity: str):
