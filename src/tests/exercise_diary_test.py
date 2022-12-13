@@ -5,7 +5,7 @@ from user import User
 from file_service import FileService
 from exercise_database import ExerciseDatabase
 
-class TestExerciseApplication(unittest.TestCase):
+class TestExerciseDiary(unittest.TestCase):
     def setUp(self):
         self.service = ExerciseService("test.txt")
         self.service.create_user("Eddy", "salasana1")

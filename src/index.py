@@ -1,4 +1,4 @@
-from exercise_application import ExerciseApplication
+from application.exercise_application import ExerciseApplication
 
 
 def main():

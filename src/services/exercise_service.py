@@ -1,9 +1,9 @@
 import sys
 from datetime import datetime
-from user import User
-from file_service import FileService
-from users import Users
-from exercise_database import ExerciseDatabase
+from users.user import User
+from storages.file_service import FileService
+from users.all_users import AllUsers
+from storages.exercise_database import ExerciseDatabase
 
 
 class ExerciseService():
@@ -20,7 +20,7 @@ class ExerciseService():
             file: Merkkijonoarvo, joka kuvaa tiedoston nimeä, johon käyttäjien tiedot tallennetaan.
         """
 
-        self._users = Users()
+        self._users = AllUsers()
         self._file = FileService(file)
         self._exercises = ExerciseDatabase()
 

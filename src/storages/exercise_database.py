@@ -1,11 +1,7 @@
-import os  # pylint: disable=unused-import
 import sqlite3
 from datetime import datetime
 from datetime import timedelta
 
-
-# poistaa tietokannan alussa
-#os.remove("activities.db")
 
 db = sqlite3.connect("activities.db")
 db.isolation_level = None

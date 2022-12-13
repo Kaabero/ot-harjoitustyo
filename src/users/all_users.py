@@ -1,8 +1,8 @@
 
-from user import User
+from users.user import User
 
 
-class Users():
+class AllUsers():
     """Luokka, joka kuvaa kaikkia käyttäjiä."""
 
     def __init__(self):

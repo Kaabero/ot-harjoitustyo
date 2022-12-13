@@ -1,5 +1,5 @@
-from user import User
-from exercise_service import ExerciseService
+from users.user import User
+from services.exercise_service import ExerciseService
 
 
 class ExerciseApplication():
