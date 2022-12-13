@@ -1,6 +1,8 @@
 # Arkkitehtuurikuvaus
 
-Ohjelman kaikki koodi on samassa hakemistossa.  
+## Rakenne
+
+Ohjelman koodi sijaitsee neljässä hakemistossa. Hakemisto _application_ sisältää käyttöliittymästä, _services_ sovelluslogiikasta ja _storages_ tietojen pysyväistallennuksesta vastaavan koodin. Hakemisto _users_ sisältää käyttäjiin liittyvät luokat.
 
 ## Luokkakaavio
 
