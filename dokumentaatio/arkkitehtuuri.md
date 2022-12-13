@@ -41,7 +41,7 @@ Ohjelman käynnistysksen yhteydessä luodaan luokan ExerciseService ainoa olio. 
 - activities_by_date(user, datefrom, dateto)
 - add_target(user, target)
 
-ExerciseService -luokan metodit voivat kutsua muiden luokkien metodeja. Esimerkiksi metodi save(), kutsuu tiedoston käsittelystä vastaavan FileService -luokan metodia tallentaaksen tiedot tiedostoon. 
+ExerciseService -luokan metodit voivat kutsua muiden luokkien metodeja. Esimerkiksi metodi exit(), kutsuu tiedoston käsittelystä vastaavan FileService -luokan metodia save() tallentaaksen tiedot tiedostoon. 
 
 ## Tietojen pysyväistallennus
 
@@ -51,12 +51,12 @@ Luokat FileService ja ExerciseDatabase huolehtivat tietojen pysyväistallennukse
 
 Ohjelma tallettaa käyttäjien tiedot tiedostoon. Tiedoston nimi määritellään koodin sisällä ExerciseServise luokan parametrina ja tiedosto luodaan ohjelman käynnistyksen yhteydessä file_service.py -tiedostossa. Tiedoston nimi on oletusarvoisesti "users.txt".
 
-Ohjelma tallettaa tehtävät tekstitiedostoon seuraavassa formaatissa:
+Ohjelma tallettaa käyttäjätiedot tekstitiedostoon seuraavasti:
 
 Irmeli;tämäonsalasana;None
 Pertti;tämäkinonsalasana;3
 
-Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty). Kenttien arvot erotellaan puolipisteellä (;).
+Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty) erottaen kentät puolipisteellä (;).
 
 ### SQLite-tietokanta
 
