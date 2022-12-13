@@ -1,9 +1,9 @@
 import unittest
 from datetime import datetime
-from exercise_service import ExerciseService
-from user import User
-from file_service import FileService
-from exercise_database import ExerciseDatabase
+from services.exercise_service import ExerciseService
+from users.user import User
+from storages.file_service import FileService
+from storages.exercise_database import ExerciseDatabase
 
 class TestExerciseDiary(unittest.TestCase):
     def setUp(self):
