@@ -51,12 +51,12 @@ Luokat FileService ja ExerciseDatabase huolehtivat tietojen pysyväistallennukse
 
 Ohjelma tallettaa käyttäjien tiedot tiedostoon. Tiedoston nimi määritellään koodin sisällä ExerciseServise luokan parametrina ja tiedosto luodaan ohjelman käynnistyksen yhteydessä file_service.py -tiedostossa. Tiedoston nimi on oletusarvoisesti "users.txt".
 
-Ohjelma tallettaa tehtävät tekstitiedostoon seuraavassa formaatissa:
+Ohjelma tallettaa käyttäjätiedot tekstitiedostoon seuraavasti:
 
 Irmeli;tämäonsalasana;None
 Pertti;tämäkinonsalasana;3
 
-Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty). Kenttien arvot erotellaan puolipisteellä (;).
+Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty) erottaen kentät puolipisteellä (;).
 
 ### SQLite-tietokanta
 
