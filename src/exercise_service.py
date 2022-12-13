@@ -1,3 +1,4 @@
+import sys
 from datetime import datetime
 from user import User
 from file_service import FileService
@@ -31,9 +32,10 @@ class ExerciseService():
                 user.weekly_target=data[1]
             self._users.add_new_user(user)
 
-    def save(self):
-        """Tallentaa käyttäjien tiedot tiedostoon."""
+    def exit(self):
+        """Tallentaa käyttäjien tiedot tiedostoon ja lopettaa ohjelman."""
         self._file.save(self._users.get_all_users())
+        sys.exit()
 
 
     def create_user(self, username, password):

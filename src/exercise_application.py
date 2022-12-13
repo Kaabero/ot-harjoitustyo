@@ -1,4 +1,3 @@
-import sys
 from user import User
 from exercise_service import ExerciseService
 
@@ -28,7 +27,7 @@ class ExerciseApplication():
             command=self.get_command()
 
             if command == "0":
-                self.exit()
+                self._service.exit()
 
             if command == "1":
                 username, password = self.get_username_and_password()
@@ -75,7 +74,7 @@ class ExerciseApplication():
             command = self.get_command()
 
             if command == "0":
-                self.exit()
+                self._service.exit()
             if command == "1":
                 self.add_new_activity(user)
             if command == "2":
@@ -167,8 +166,3 @@ class ExerciseApplication():
         print("Press 2 to search by date")
         print("Press 3 to search by activity")
 
-    def exit(self):
-        """Lopettaa istunnon ja tallentaa käyttäjätiedot."""
-        self._user=None
-        self._service.save()
-        sys.exit()
