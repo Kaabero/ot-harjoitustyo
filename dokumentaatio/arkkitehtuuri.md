@@ -54,6 +54,7 @@ Ohjelma tallettaa käyttäjien tiedot tiedostoon. Tiedoston nimi määritellää
 Ohjelma tallettaa käyttäjätiedot tekstitiedostoon seuraavasti:
 
 Irmeli;tämäonsalasana;None
+
 Pertti;tämäkinonsalasana;3
 
 Eli käyttäjätunnus, salasana ja viikkotavoite (mikäli se on määritelty) erottaen kentät puolipisteellä (;).
