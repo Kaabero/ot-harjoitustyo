@@ -41,7 +41,7 @@ Ohjelman käynnistysksen yhteydessä luodaan luokan ExerciseService ainoa olio. 
 - activities_by_date(user, datefrom, dateto)
 - add_target(user, target)
 
-ExerciseService -luokan metodit voivat kutsua muiden luokkien metodeja. Esimerkiksi metodi save(), kutsuu tiedoston käsittelystä vastaavan FileService -luokan metodia tallentaaksen tiedot tiedostoon. 
+ExerciseService -luokan metodit voivat kutsua muiden luokkien metodeja. Esimerkiksi metodi exit(), kutsuu tiedoston käsittelystä vastaavan FileService -luokan metodia save() tallentaaksen tiedot tiedostoon. 
 
 ## Tietojen pysyväistallennus
 
