@@ -47,13 +47,14 @@ class ExerciseApplication():
                 self.login_instructions()
 
     def get_command(self):
+        """Palauttaa käyttäjän syöttämän komennon."""
         print("")
         command = input("What do you want to do? ")
         print("")
         return command
 
     def get_username_and_password(self):
-        """Palauttaa käyttäjän syöttämät tunnukset"""
+        """Palauttaa käyttäjän syöttämät tunnukset."""
 
         username = input("Username: ")
         password = input("Password: ")
