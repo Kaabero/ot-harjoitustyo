@@ -22,6 +22,7 @@
 | 9.12.2022     |   4      | Testejä, arkkitehtuurikuvausta ja käyttöohje      |
 | 9.12.2022     |   1      | Lisää tilastotoimintoja                           |
 | 13.12.2022    |   2      | Testien korjausta ja hakemistojen teko            |
-| yht.          |   45     |                                                   |
+| 14.12.2022    |   2      | Lisää testejä, koodin siivousta ja viilausta      |
+| yht.          |   47     |                                                   |
 
 
