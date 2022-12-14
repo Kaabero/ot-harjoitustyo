@@ -40,9 +40,18 @@
 - Luotu luokka ExerciseService, joka vastaa sovelluslogiikasta
 - Korjattu testejä niin, etteivät testit kysy käyttäjältä syötteitä ja ovat automaattisia
 - Käyttäjä voi hakea tilastot kaikista liikuntasuorituksistaan: eri lajien määrä ja kokonaiskesto
+- Käyttäjä voi hakea liikuntasuorituksiaan päivämäärien tai lajin perusteella
 - Testattu, että kelvolliset syötteet käyttäjää luodessa palauttavat käyttäjän
 - Testattu, että liikuntasuorituksen keston muokkaus tunneiksi ja minuuteiksi toimii
 - Testattu, että päivämäärän muokkaus muotoon dd.mm.vvvv toimii
 - Testattu, että tavoitteen asettaminen epäkelvoilla syötteillä ei onnistu
 - Testattu, ettei ohjelma palauta mitään, jos tilastoja hakee päivämäärillä, joiden sisällä ei ole kirjauksia
-- Testattu, ettei ohjelma palauta mitään, jos tilastoja hakee liikuntalajilla, jolle ei ole tehty kirjauksia 
+- Testattu, ettei ohjelma palauta mitään, jos tilastoja hakee liikuntalajilla, jolle ei ole tehty kirjauksia
+
+## Viikko 7
+
+- Testattu, että liikuntasuoritusten lisäys tietokantaan onnistuu
+- Testattu, että liikuntasuoritusten haku tietokannasta kuluvalle viikolle toimii
+- Testattu, että ohjelman lopetus aiheuttaa SystemExitin
+- Testattu, ettei ohjelma palauta mitään, jos kuluvan viikon liikuntasuorituksia hakee, eikä viikolle ole lisätty aktiviteetteja 
+- Testattu, ettei ohjelma palauta mitään, jos tilastoja haetaan kaikista liikuntasuorituksista, eikä kirjauksia ole vielä tehty
