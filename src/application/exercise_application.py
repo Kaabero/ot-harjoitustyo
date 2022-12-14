@@ -117,7 +117,7 @@ class ExerciseApplication():
                 minutes = (input("minutes: "))
 
                 if self._service.valid_duration(hours, minutes) is not False:
-                    self._service.add_new_activity(user, activity,
+                    self._service.add_new_activity(user, activity.lower(),
                                                      self._service.valid_date(
                                                          dateinput),
                                                      self._service.valid_duration(hours, minutes))
@@ -154,7 +154,7 @@ class ExerciseApplication():
             if command == "3":
                 activity = input("Please, give the type of exercise: ")
                 if self._service.valid_activity(activity):
-                    self._service.activities_by_activity(user, activity)
+                    self._service.activities_by_activity(user, activity.lower())
 
             if command not in "0123":
                 self.stats_instructions()
