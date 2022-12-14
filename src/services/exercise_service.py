@@ -1,10 +1,9 @@
 import sys
 from datetime import datetime
 from users.user import User
-from storages.file_service import FileService
 from users.all_users import AllUsers
+from storages.file_service import FileService
 from storages.exercise_database import ExerciseDatabase
-
 
 class ExerciseService():
     """Luokka, joka vastaa sovelluslogiikasta.
@@ -176,6 +175,7 @@ class ExerciseService():
                     f"Activity: {activity[2]}, date: {date}, duration: {duration}")
         else:
             print("You haven't added any activity to this week yet")
+            return
 
     def get_all_activities(self, user: User):
         """Tulostaa yhteenvedon käyttäjän kaikista liikuntasuorituksista.
@@ -211,6 +211,7 @@ class ExerciseService():
 
         else:
             print("No activities added.")
+            return
 
     def activities_by_date(self, user: User, datefrom: datetime, dateto: datetime):
         """Tulostaa käyttäjän liikuntasuoritukset tietyllä aikavälillä.

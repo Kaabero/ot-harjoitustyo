@@ -165,4 +165,3 @@ class ExerciseApplication():
         print("Press 1 to see all activities added")
         print("Press 2 to search by date")
         print("Press 3 to search by activity")
-

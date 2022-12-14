@@ -18,7 +18,7 @@ class ExerciseDatabase():
         try:
             db.execute("CREATE TABLE Activities (id INTEGER PRIMARY KEY, username TEXT, \
             activity TEXT, date DATE, duration INTEGER)")
-        except:
+        except sqlite3.OperationalError:
             return
 
     def add_new_activity(self, username, activity, date: datetime, duration):
@@ -36,7 +36,7 @@ class ExerciseDatabase():
 
         activity = db.execute("INSERT INTO Activities (username, activity, date, \
         duration) VALUES (?,?,?,?)", [username, activity, date, duration])
-        return True
+        return activity. lastrowid
 
     def activities_by_user(self, username):
         """Palauttaa kaikki käyttäjän liikuntasuoritukset.
@@ -94,6 +94,23 @@ class ExerciseDatabase():
         activities = db.execute("SELECT * FROM Activities WHERE username=? \
         AND activity = ? ORDER BY date", [username, activity]).fetchall()
         return activities
+
+    def delete(self, id_number):
+        """Poistaa taulusta liikuntasuorituksen, jonka id on annettu metodin parametrina.
+
+        Args:
+            id: Poistettavan liikuntasuorituksen id -numero.
+        """
+        db.execute("DELETE FROM Activities WHERE id=?", [id_number])
+
+    def search_by_id(self, id_number):
+        """Hakee taulusta liikuntasuorituksen, jonka id on annettu metodin parametrina.
+
+        Args:
+            id: Haettavan liikuntasuorituksen id -numero.
+        """
+        return db.execute("SELECT * FROM Activities WHERE id=?", [id_number]).fetchall()
+
 
 def get_monday_midnight():
     """Palauttaa kuluvan viikon maanantain keskiyön päivämäärä -oliona."""

@@ -21,6 +21,7 @@
 | 8.12.2022     |   2      | Tilastojen haku -toiminto                         |
 | 9.12.2022     |   4      | Testejä, arkkitehtuurikuvausta ja käyttöohje      |
 | 9.12.2022     |   1      | Lisää tilastotoimintoja                           |
-| yht.          |   43     |                                                   |
+| 13.12.2022    |   2      | Testien korjausta ja hakemistojen teko            |
+| yht.          |   45     |                                                   |
 
 
