@@ -23,6 +23,7 @@
 | 9.12.2022     |   1      | Lisää tilastotoimintoja                           |
 | 13.12.2022    |   2      | Testien korjausta ja hakemistojen teko            |
 | 14.12.2022    |   2      | Lisää testejä, koodin siivousta ja viilausta      |
-| yht.          |   47     |                                                   |
+| 15.12. 2022   |   1      | Testausdokumentti                                 |
+| yht.          |   48     |                                                   |
 
 
