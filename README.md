@@ -18,9 +18,13 @@ Sovelluksen avulla käyttäjien on mahdollista pitää liikuntapäiväkirjaa, as
 
 [Työaikakirjanpito](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
+[Testausdokumentti](https://github.com/Kaabero/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md)
+
 [Viikon 5 release](https://github.com/Kaabero/ot-harjoitustyo/releases/tag/viikko5)
 
 [Viikon 6 release](https://github.com/Kaabero/ot-harjoitustyo/releases/tag/viikko6)
+
+[Loppupalautus](https://github.com/Kaabero/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Python -versio
 
